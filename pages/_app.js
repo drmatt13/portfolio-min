@@ -40,7 +40,7 @@ function MyApp({ Component, pageProps }) {
           z-index: -1;
         }
       `}</style>
-      <video className="blur grayscale-[80%]" autoPlay muted loop>
+      <video className="/blur /grayscale-[80%]" autoPlay muted loop>
         <source
           src="/video/273759854_120970367148781_9211654846354043201_n.mp4"
           type="video/mp4"
