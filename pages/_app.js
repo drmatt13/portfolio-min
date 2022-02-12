@@ -14,6 +14,20 @@ function MyApp({ Component, pageProps }) {
           href="https://fonts.googleapis.com/css2?family=Redressed&family=Ubuntu&display=swap"
           rel="stylesheet"
         />
+        <title>Costello Tattoo</title>
+        {/* <meta property="og:url" content="http://www.nytimes.com/2015/02/19/arts/international/when-great-minds-dont-think-alike.html" /> */}
+        {/* <meta property="og:type" content="article" /> */}
+        <meta property="og:site_name" content="Costello Tattoo" />
+        <meta
+          property="og:title"
+          content="Cody Costello - Black & Gray Tattoo Specialist"
+        />
+        <meta
+          property="og:description"
+          content="Hi, I'm Cody. I am a tattoo artist and this is a generic temp description."
+        />
+        <meta property="og:image" content="/images/cody4.jpg" />
+        <meta name="theme-color" content="#3c374a" />
       </Head>
       <style jsx>{`
         video {
