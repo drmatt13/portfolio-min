@@ -22,19 +22,47 @@ import image14 from "../public/images/grid14.jpg";
 import image15 from "../public/images/grid15.jpg";
 import image16 from "../public/images/grid16.jpg";
 import image17 from "../public/images/grid17.jpg";
+import image18 from "../public/images/grid18.jpg";
+import image19 from "../public/images/grid19.jpg";
+import image20 from "../public/images/grid20.jpg";
+import image21 from "../public/images/grid21.jpg";
+import image22 from "../public/images/grid22.jpg";
+import image23 from "../public/images/grid23.jpg";
+import image24 from "../public/images/grid24.jpg";
+import image25 from "../public/images/grid25.jpg";
+import image26 from "../public/images/grid26.jpg";
+import image27 from "../public/images/grid27.jpg";
+import image28 from "../public/images/grid28.jpg";
+import image29 from "../public/images/grid29.jpg";
+import image30 from "../public/images/grid30.jpg";
+import image31 from "../public/images/grid31.jpg";
+import image32 from "../public/images/grid32.jpg";
 
 export default function Home() {
   const [images, setImages] = useState([
+    image20,
+    image21,
+    image24,
+    image25,
+    image26,
+    image27,
+    image28,
+    image29,
+    image30,
+    image31,
+    image32,
     image1,
     image2,
     image3,
-    image4,
     image5,
     image6,
     image7,
     image8,
     image9,
     image10,
+    // image4,
+    image22,
+    image23,
     image11,
     image12,
     image13,
@@ -42,6 +70,8 @@ export default function Home() {
     image15,
     image16,
     image17,
+    image18,
+    image19,
   ]);
 
   return (
@@ -98,7 +128,7 @@ export default function Home() {
           loading="lazy"
         ></iframe>
       </div>
-      <div className="mt-12 xs:mt-8 sm:mt-8 md:mt-10 lg:mt-12 pb-12 md:pb-16 lg:pb-20 w-full mx-auto grid px-16 xs:px-0 grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 gap-8 xs:gap-6 sm:gap-10 lg:grid-cols-4 lg:gap-12 xl:grid-cols-5 text-[0]">
+      <div className="mt-12 xs:mt-8 sm:mt-8 md:mt-10 lg:mt-12 pb-12 md:pb-16 lg:pb-20 w-full mx-auto grid px-16 xs:px-0 grid-cols-1 xs:grid-cols-3 /sm:grid-cols-3 gap-8 xs:gap-[2.5vw] sm:gap-6 md:gap-8 lg:grid-cols-4 lg:gap-12 xl:grid-cols-5 text-[0]">
         {images &&
           images.map((image, index) => (
             <div
