@@ -1,14 +1,18 @@
-import { useState } from "react";
-
+import { useState, useContext } from "react";
 import Image from "next/image";
 import Link from "next/link";
-// import styles from "../styles/Home.module.scss";
 
-// images
+// context
+import _appContext from "../context/_appContext";
+
+// other images
+import pfp from "../public/images/cody4.jpg";
+import bishopInc from "../public/images/ink1.png";
+
+// tattoo images
 import image1 from "../public/images/grid1.jpg";
 import image2 from "../public/images/grid2.jpg";
 import image3 from "../public/images/grid3.jpg";
-import image4 from "../public/images/grid4.jpg";
 import image5 from "../public/images/grid5.jpg";
 import image6 from "../public/images/grid6.jpg";
 import image7 from "../public/images/grid7.jpg";
@@ -39,6 +43,8 @@ import image31 from "../public/images/grid31.jpg";
 import image32 from "../public/images/grid32.jpg";
 
 export default function Home() {
+  const { setImage } = useContext(_appContext);
+
   const [images, setImages] = useState([
     image25,
     image26,
@@ -60,7 +66,6 @@ export default function Home() {
     image8,
     image9,
     image10,
-    // image4,
     image28,
     image11,
     image22,
@@ -85,7 +90,8 @@ export default function Home() {
         <div className="flex flex-col md:mr-16 lg:mr-24 xl:mr-16 w-56 xl:w-72">
           <div className="shadow-lg text-[0] rounded-full overflow-hidden cursor-pointer">
             <Image
-              src={require("../public/images/cody4.jpg")}
+              src={pfp}
+              onClick={() => setImage(pfp)}
               className="rounded-2xl"
               width={350}
               height={350}
@@ -117,7 +123,8 @@ export default function Home() {
 
         <div className="hidden xl:inline mr-12 shadow-lg max-h-fit bg-black text-[0] overflow-hidden rounded-2xl cursor-pointer">
           <Image
-            src={require("../public/images/ink1.png")}
+            src={bishopInc}
+            onClick={() => setImage(bishopInc)}
             className="rounded-2xl"
             width={280}
             height={400}
@@ -139,6 +146,7 @@ export default function Home() {
             >
               <Image
                 src={image}
+                onClick={() => setImage(image)}
                 className="rounded-2xl"
                 width={300}
                 height={300}
