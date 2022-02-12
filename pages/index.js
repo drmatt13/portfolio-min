@@ -40,23 +40,23 @@ import image32 from "../public/images/grid32.jpg";
 
 export default function Home() {
   const [images, setImages] = useState([
-    image20,
-    image21,
-    image24,
     image25,
     image26,
+    image24,
     image27,
     image28,
     image29,
     image30,
     image31,
-    image32,
     image1,
+    image32,
     image2,
     image3,
     image5,
-    image6,
     image7,
+    image6,
+    image20,
+    image21,
     image8,
     image9,
     image10,
@@ -86,6 +86,7 @@ export default function Home() {
           <div className="shadow-lg text-[0] rounded-full overflow-hidden cursor-pointer">
             <Image
               src={require("../public/images/cody4.jpg")}
+              className="rounded-2xl"
               width={350}
               height={350}
               objectFit="cover"
@@ -117,6 +118,7 @@ export default function Home() {
         <div className="hidden xl:inline mr-12 shadow-lg max-h-fit bg-black text-[0] overflow-hidden rounded-2xl cursor-pointer">
           <Image
             src={require("../public/images/ink1.png")}
+            className="rounded-2xl"
             width={280}
             height={400}
             objectFit="cover"
@@ -135,7 +137,13 @@ export default function Home() {
               key={index}
               className="shadow-lg rounded-2xl overflow-hidden cursor-pointer hover:scale-105 transition-transform"
             >
-              <Image src={image} width={300} height={300} objectFit="cover" />
+              <Image
+                src={image}
+                className="rounded-2xl"
+                width={300}
+                height={300}
+                objectFit="cover"
+              />
             </div>
           ))}
       </div>
