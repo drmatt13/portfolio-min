@@ -133,8 +133,10 @@ function MyApp({ Component, pageProps }) {
           </div>
         </div>
       </div>
-      <div className="absolute top-0 sm:container mx-auto xs:px-[6vw] sm:px-12 md:px-16 lg:px-20 xl:px-24 pt-28 sm:pt-36">
-        <Component {...pageProps} />
+      <div className="absolute w-full">
+        <div className="sm:container mx-auto xs:px-[6vw] sm:px-12 md:px-16 lg:px-20 xl:px-24 pt-28 sm:pt-36">
+          <Component {...pageProps} />
+        </div>
       </div>
     </>
   );
