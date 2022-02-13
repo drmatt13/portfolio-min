@@ -4,16 +4,12 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
-// loading
-import loadingImage from "../public/giphy.gif";
-
 // context
 import _appContext from "../context/_appContext";
 
 function MyApp({ Component, pageProps }) {
   const [isMobile, setIsMobile] = useState(false);
   const [image, setImage] = useState(undefined);
-  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     if (
@@ -27,10 +23,6 @@ function MyApp({ Component, pageProps }) {
       setIsMobile(true);
     }
   }, []);
-
-  useEffect(() => {
-    setIsLoading(true);
-  }, [image]);
 
   return (
     <>
@@ -85,26 +77,16 @@ function MyApp({ Component, pageProps }) {
               onClick={() => setImage(undefined)}
             />
             <div className="relative z-10 shadow-lg rounded-2xl overflow-hidden h-[500px] max-h-[70vw] w-[500px] max-w-[70vw] noselect text-[0]">
-              {isLoading && (
-                <div className="bg-white/80 backdrop-blur-lg h-full w-full flex justify-center items-center">
-                  <Image
-                    src={loadingImage}
-                    className="rounded-2xl"
-                    width={150}
-                    height={150}
-                    objectFit="cover"
-                  />
-                </div>
-              )}
-              <Image
-                src={image}
-                className="rounded-2xl"
-                width={500}
-                height={500}
-                objectFit="cover"
-                loading="eager"
-                onLoad={() => setIsLoading(false)}
-              />
+              <div className="bg-white/50 backdrop-blur-lg rounded-2xl">
+                <Image
+                  src={image}
+                  className="rounded-2xl animate-fade-in"
+                  width={500}
+                  height={500}
+                  objectFit="cover"
+                  loading="eager"
+                />
+              </div>
             </div>
           </div>
         </>
