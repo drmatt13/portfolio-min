@@ -4,6 +4,9 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
+// images
+import logo from "../public/images/logo.jpg";
+
 // context
 import _appContext from "../context/_appContext";
 
@@ -27,6 +30,10 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
+        <meta
+          name="viewport"
+          content="width=device-width,initial-scale=1.0,user-scalable=no"
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
         <link
@@ -61,7 +68,9 @@ function MyApp({ Component, pageProps }) {
         }
       `}</style>
       <video
-        className={isMobile ? "" : "blur grayscale-[80%]"}
+        className={
+          isMobile ? "blur-[3px] grayscale-[30%]" : "blur grayscale-[80%]"
+        }
         autoPlay
         playsInline
         muted
@@ -73,11 +82,11 @@ function MyApp({ Component, pageProps }) {
         <>
           <div className="fixed top-0 left-0 h-screen w-screen flex justify-center items-center z-20">
             <div
-              className="absolute top-0 left-0 h-full w-full bg-black/50"
+              className="absolute top-0 left-0 h-full w-full bg-black/50 animate-fade-in-fast"
               onClick={() => setImage(undefined)}
             />
             <div className="relative z-10 shadow-lg rounded-2xl overflow-hidden h-[500px] max-h-[70vw] w-[500px] max-w-[70vw] noselect text-[0]">
-              <div className="bg-white/50 backdrop-blur-lg rounded-2xl">
+              <div className="bg-white/50 backdrop-blur-lg rounded-2xl animate-fade-in-fast">
                 <Image
                   src={image}
                   className="rounded-2xl animate-fade-in"
@@ -92,19 +101,19 @@ function MyApp({ Component, pageProps }) {
         </>
       )}
       <div className="relative h-screen overflow-y-auto">
-        <div className="noselect sticky top-0 z-10 bg-black/75 backdrop-blur-lg h-16 sm:h-24 w-full mb-12 xs:mb-16 sm:mb-20 pl-8 pr-6 md:px-[8vw] lg:px-28 flex items-center justify-between text-white">
+        <div className="shadow-sm shadow-black/75 noselect sticky top-0 z-10 bg-black/75 backdrop-blur-lg h-16 sm:h-24 w-full mb-12 xs:mb-16 sm:mb-20 pl-8 pr-6 md:px-[8vw] lg:px-28 flex items-center justify-between text-white">
           <div className="flex items-center">
-            <div className="hidden sm:inline mr-4 md:mr-5 h-12 w-12 md:h-14 md:w-14 lg:h-[3.75rem] lg:w-[3.75rem] shadow-lg rounded-full overflow-hidden text-[0] cursor-pointer">
-              <Link href="/">
+            <Link href="/">
+              <div className="hidden sm:inline mr-4 md:mr-5 h-12 w-12 md:h-14 md:w-14 lg:h-[3.75rem] lg:w-[3.75rem] shadow-lg rounded-full overflow-hidden text-[0] cursor-pointer">
                 <Image
-                  src={require("../public/images/logo.jpg")}
+                  src={logo}
                   className="rounded-full"
                   width={75}
                   height={75}
                   objectFit="cover"
                 />
-              </Link>
-            </div>
+              </div>
+            </Link>
             <div
               className="flex flex-col sm:text-xl lg:text-2xl font-bold cursor-pointer transition-all group"
               style={{

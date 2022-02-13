@@ -92,7 +92,7 @@ export default function Home() {
             <Image
               src={pfp}
               onClick={() => setImage(pfp)}
-              className="rounded-2xl"
+              className="rounded-full"
               width={350}
               height={350}
               objectFit="cover"
@@ -120,7 +120,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <div className="noselect hidden xl:inline mr-12 shadow-lg max-h-fit bg-black text-[0] overflow-hidden rounded-2xl cursor-pointer">
+        <div className="noselect hidden xl:inline mr-12 shadow-lg max-h-fit text-[0] overflow-hidden rounded-2xl cursor-pointer">
           <Image
             src={bishopInc}
             onClick={() => setImage(bishopInc)}
@@ -131,22 +131,22 @@ export default function Home() {
           />
         </div>
         <iframe
-          className="hidden md:inline flex-1 rounded-2xl"
+          className="hidden md:inline flex-1 rounded-2xl shadow-lg"
           src="https://maps.google.com/maps?width=350&amp;height=500&amp;hl=en&amp;q=Irvine%20Ink%20Tattoo%20Studios,%2020996%20Bake%20Pkwy,%20Lake%20Forest,%20CA%2092630+(Irvine%20Ink%20Tattoo%20Studios)&amp;t=&amp;z=10&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-          loading="lazy"
+          // loading="lazy"
         ></iframe>
       </div>
-      <div className="mt-12 xs:mt-8 sm:mt-8 md:mt-10 lg:mt-12 pb-12 md:pb-16 lg:pb-20 w-full mx-auto grid px-16 xs:px-0 grid-cols-1 xs:grid-cols-3 /sm:grid-cols-3 gap-8 xs:gap-[2.5vw] sm:gap-6 md:gap-8 lg:grid-cols-4 lg:gap-12 xl:grid-cols-5 text-[0]">
+      <div className="mt-8 md:mt-10 lg:mt-12 pb-12 md:pb-16 lg:pb-20 w-full mx-auto grid px-6 2xs:px-8 xs:px-0 grid-cols-3 gap-2 2xs:gap-[2vw] xs:gap-[2.5vw] sm:gap-6 md:gap-8 lg:grid-cols-4 lg:gap-12 xl:grid-cols-5 text-[0]">
         {images &&
           images.map((image, index) => (
             <div
               key={index}
-              className="noselect shadow-lg rounded-2xl overflow-hidden cursor-pointer hover:scale-105 transition-transform"
+              className="noselect shadow-lg rounded-md 2xs:rounded-xl xs:rounded-2xl overflow-hidden cursor-pointer hover:scale-105 transition-transform"
             >
               <Image
                 src={image}
                 onClick={() => setImage(image)}
-                className="rounded-2xl"
+                className="rounded-md 2xs:rounded-xl xs:rounded-2xl"
                 width={300}
                 height={300}
                 objectFit="cover"
