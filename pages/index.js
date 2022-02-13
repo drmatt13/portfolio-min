@@ -106,7 +106,7 @@ export default function Home() {
                 src="https://img.icons8.com/color/144/000000/facebook-new.png"
               />
             </Link>
-            <Link href="https://www.instagram.com/costello2805/">
+            <Link href="https://www.instagram.com/costello_2905/">
               <img
                 className="self-center hover:scale-110 cursor-pointer transition-transform"
                 src="https://img.icons8.com/fluency/144/000000/instagram-new.png"
