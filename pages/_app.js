@@ -4,12 +4,16 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
+// loading
+import loadingImage from "../public/giphy.gif";
+
 // context
 import _appContext from "../context/_appContext";
 
 function MyApp({ Component, pageProps }) {
   const [isMobile, setIsMobile] = useState(false);
   const [image, setImage] = useState(undefined);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     if (
@@ -23,6 +27,10 @@ function MyApp({ Component, pageProps }) {
       setIsMobile(true);
     }
   }, []);
+
+  useEffect(() => {
+    setIsLoading(true);
+  }, [image]);
 
   return (
     <>
@@ -56,6 +64,9 @@ function MyApp({ Component, pageProps }) {
           top: 0;
           left: 0;
         }
+        .shadow-lg {
+          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+        }
       `}</style>
       <video
         className={isMobile ? "" : "blur grayscale-[80%]"}
@@ -73,21 +84,33 @@ function MyApp({ Component, pageProps }) {
               className="absolute top-0 left-0 h-full w-full bg-black/50"
               onClick={() => setImage(undefined)}
             />
-            <div className="rounded-lg overflow-hidden max-h-[70vw] max-w-[70vw]">
+            <div className="relative z-10 shadow-lg rounded-2xl overflow-hidden h-[500px] max-h-[70vw] w-[500px] max-w-[70vw] noselect text-[0]">
+              {isLoading && (
+                <div className="bg-white/80 backdrop-blur-lg h-full w-full flex justify-center items-center">
+                  <Image
+                    src={loadingImage}
+                    className="rounded-2xl"
+                    width={150}
+                    height={150}
+                    objectFit="cover"
+                  />
+                </div>
+              )}
               <Image
                 src={image}
-                className="rounded-lg"
+                className="rounded-2xl"
                 width={500}
                 height={500}
                 objectFit="cover"
                 loading="eager"
+                onLoad={() => setIsLoading(false)}
               />
             </div>
           </div>
         </>
       )}
       <div className="relative h-screen overflow-y-auto">
-        <div className="sticky top-0 z-10 bg-black/75 backdrop-blur-lg h-16 sm:h-24 w-full mb-12 xs:mb-16 sm:mb-20 pl-8 pr-6 md:px-[8vw] lg:px-28 flex items-center justify-between text-white">
+        <div className="noselect sticky top-0 z-10 bg-black/75 backdrop-blur-lg h-16 sm:h-24 w-full mb-12 xs:mb-16 sm:mb-20 pl-8 pr-6 md:px-[8vw] lg:px-28 flex items-center justify-between text-white">
           <div className="flex items-center">
             <div className="hidden sm:inline mr-4 md:mr-5 h-12 w-12 md:h-14 md:w-14 lg:h-[3.75rem] lg:w-[3.75rem] shadow-lg rounded-full overflow-hidden text-[0] cursor-pointer">
               <Link href="/">

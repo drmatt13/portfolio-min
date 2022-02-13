@@ -45,7 +45,7 @@ import image32 from "../public/images/grid32.jpg";
 export default function Home() {
   const { setImage } = useContext(_appContext);
 
-  const [images, setImages] = useState([
+  const [images] = useState([
     image25,
     image26,
     image24,
@@ -88,7 +88,7 @@ export default function Home() {
       `}</style>
       <div className="flex justify-center md:justify-between flex-row">
         <div className="flex flex-col md:mr-16 lg:mr-24 xl:mr-16 w-56 xl:w-72">
-          <div className="shadow-lg text-[0] rounded-full overflow-hidden cursor-pointer">
+          <div className="noselect shadow-lg text-[0] rounded-full overflow-hidden cursor-pointer">
             <Image
               src={pfp}
               onClick={() => setImage(pfp)}
@@ -99,7 +99,7 @@ export default function Home() {
             />
           </div>
 
-          <div className="mt-4 w-full grid grid-cols-3">
+          <div className="noselect mt-4 w-full grid grid-cols-3">
             <Link href="https://www.facebook.com/costello.cody">
               <img
                 className="self-center hover:scale-110 cursor-pointer transition-transform"
@@ -120,8 +120,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-
-        <div className="hidden xl:inline mr-12 shadow-lg max-h-fit bg-black text-[0] overflow-hidden rounded-2xl cursor-pointer">
+        <div className="noselect hidden xl:inline mr-12 shadow-lg max-h-fit bg-black text-[0] overflow-hidden rounded-2xl cursor-pointer">
           <Image
             src={bishopInc}
             onClick={() => setImage(bishopInc)}
@@ -142,7 +141,7 @@ export default function Home() {
           images.map((image, index) => (
             <div
               key={index}
-              className="shadow-lg rounded-2xl overflow-hidden cursor-pointer hover:scale-105 transition-transform"
+              className="noselect shadow-lg rounded-2xl overflow-hidden cursor-pointer hover:scale-105 transition-transform"
             >
               <Image
                 src={image}
