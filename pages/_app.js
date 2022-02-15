@@ -128,7 +128,7 @@ function MyApp({ Component, pageProps }) {
                   <span className="hidden md:inline">- Tattoo Artist</span>
                 </div>
               </Link>
-              <div className="h-[1.5px] w-0 rounded-sm bg-gradient-to-r from-transparent via-white to-transparent group-hover:w-full transition-all" />
+              <div className="h-[1.5px] w-0 rounded-sm bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-100 group-hover:w-full transition-all" />
             </div>
           </div>
           <div
@@ -143,7 +143,7 @@ function MyApp({ Component, pageProps }) {
               <Link href="/">
                 <>
                   <div>services</div>
-                  <div className="h-[1.5px] w-0 rounded-full bg-gradient-to-r from-transparent via-white to-transparent group-hover:w-full transition-all" />
+                  <div className="h-[1.5px] w-0 rounded-full bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-100 group-hover:w-full transition-all" />
                 </>
               </Link>
             </div>
@@ -151,7 +151,7 @@ function MyApp({ Component, pageProps }) {
               <Link href="/">
                 <>
                   <div>about me</div>
-                  <div className="h-[1.5px] w-0 rounded-full bg-gradient-to-r from-transparent via-white to-transparent group-hover:w-full transition-all" />
+                  <div className="h-[1.5px] w-0 rounded-full bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-100 group-hover:w-full transition-all" />
                 </>
               </Link>
             </div>
@@ -159,7 +159,7 @@ function MyApp({ Component, pageProps }) {
               <Link href="/">
                 <>
                   <div>contact</div>
-                  <div className="h-[1.5px] w-0 rounded-full bg-gradient-to-r from-transparent via-white to-transparent group-hover:w-full transition-all" />
+                  <div className="h-[1.5px] w-0 rounded-full bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-100 group-hover:w-full transition-all" />
                 </>
               </Link>
             </div>
