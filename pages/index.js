@@ -38,9 +38,17 @@ export default function Home() {
           }
         }
         @media (max-height: 735px) {
-          .sm\:hidden {
-            display: none;
+          .pfp {
+            height: 100px;
+            width: 100px;
           }
+          .test2 {
+            height: 2.5rem;
+            width: 2.5rem;
+          }
+          // .sm\:hidden {
+          //   display: none;
+          // }
         }
       `}</style>
       <div className="min-h-[550px] sm:min-h-[600px] md:min-h-[625px] lg:min-h-[650px] xl:min-h-[700px] h-full flex flex-col">
