@@ -34,10 +34,6 @@ function MyApp({ Component, pageProps }) {
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Redressed&family=Ubuntu&display=swap"
-          rel="stylesheet"
-        />
         <title>Portfolio | Matthew Sweeney</title>
         {/* <meta property="og:url" content="http://www.nytimes.com/2015/02/19/arts/international/when-great-minds-dont-think-alike.html" /> */}
         <meta property="og:site_name" content="Costello Tattoo" />

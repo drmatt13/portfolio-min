@@ -42,10 +42,20 @@ export default function Home() {
             width: 4rem;
           }
         }
+        @media (max-width: 640px) and (max-height: 750px) {
+          .pfp {
+            height: 140px;
+            width: 140px;
+          }
+          .test2 {
+            height: 4rem;
+            width: 4rem;
+          }
+        }
       `}</style>
       <div className="min-h-[600px] sm:min-h-[525px] md:min-h-[625px] xl:min-h-[650px] h-full flex flex-col">
         <div className="flex flex-1 justify-center items-center sm:hidden">
-          <div className="flex flex-col items-center">
+          <div className="my-8 flex flex-col items-center">
             <div className="pfp rounded-full overflow-hidden">
               <Image
                 src={logo}
