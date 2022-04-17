@@ -58,7 +58,7 @@ const WebsiteCard = ({
   };
 
   return (
-    <div className="snap-center snap-always rounded-lg min-w-[12rem] h-[18rem] sm:min-w-[14rem] sm:h-[20rem] lg:min-w-[16rem] lg:h-[22rem] xl:min-w-[18rem] xl:h-[24rem]">
+    <div className="snap-center snap-always rounded-lg min-w-[12rem] h-[16.5rem] sm:min-w-[14rem] sm:h-[20rem] lg:min-w-[16rem] lg:h-[22rem] xl:min-w-[17rem] xl:h-[23rem] 2xl:min-w-[18rem] 2xl:h-[24rem]">
       <style jsx>{`
         .scroll::-webkit-scrollbar {
           width: 6px;
@@ -93,7 +93,7 @@ const WebsiteCard = ({
             box-shadow: rgba(0, 0, 0, 1) 0px 5px 15px;
           }
           .extrude {
-            transition: all 0.5s;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
           }
           .group .extrude {
             overflow: visible !important;
@@ -106,7 +106,7 @@ const WebsiteCard = ({
             box-shadow: rgba(0, 0, 0, 1) 0px 5px 15px;
           }
           .group .divider_bar {
-            opacity: 0;
+            opacity: 0.1;
           }
           .group .button {
             box-shadow: rgba(0, 0, 0, 1) 0px 5px 15px;
@@ -122,7 +122,7 @@ const WebsiteCard = ({
           transition: "all .4s cubic-bezier(.165, .84, .44, 1)",
         }}
       >
-        <div className="relative flex flex-[1.1] transition-all ease-in select-none">
+        <div className="relative flex min-h-[1%] h-32 sm:flex-[1.1] transition-all ease-in select-none">
           <div className="extrude image_container flex w-full rounded-t-md overflow-hidden">
             <Image
               src={src}
@@ -140,15 +140,15 @@ const WebsiteCard = ({
         <div className="h-1 w-full bg-blue-500 divider_bar transition-all duration-300" />
         <div className="relative flex-1">
           <div className="extrude absolute top-0 left-0 h-full w-full flex flex-col">
-            <div className="py-2 text-center text-white text-xl sm:text-base lg:text-lg xl:text-xl">
+            <div className="py-2 text-center text-white text-xl sm:text-base lg:text-lg 2xl:text-xl">
               {title}
             </div>
-            <div className="hidden sm:inline scroll ml-2.5 pl-1.5 mr-2 flex-1 text-white text-[.8rem] lg:text-sm xl:text-base overflow-y-auto break-words">
+            <div className="hidden sm:inline scroll ml-2.5 pl-1.5 mr-2 flex-[1.2] text-white text-[.8rem] lg:text-sm xl:text-base overflow-y-auto break-words">
               {description}
             </div>
             <div className="flex-1 flex flex-col justify-end">
               <div
-                className="button text-white text-sm xl:text-xl no-select cursor-pointer mb-2 mt-3 mx-4 py-2 rounded-sm sm:rounded-md text-center bg-blue-500 hover:bg-blue-400 transition-all duration-100 select-none"
+                className="button text-white text-sm 2xl:text-xl no-select cursor-pointer mb-2 mt-3 mx-4 py-2 rounded-sm sm:rounded-md text-center bg-blue-500 hover:bg-blue-400 transition-all duration-100 select-none"
                 onClick={() => window.open(link, "_blank").focus()}
               >
                 {button}

@@ -101,7 +101,7 @@ const Websites = () => {
   ]);
 
   return (
-    <div className="relative /pb-8 /sm:pb-12">
+    <div className="relative">
       <div className="absolute top-0 w-full h-full opacity-60 dark:opacity-50 brightness-150 dark:brightness-75 /transform-gpu"></div>
       <div className="text-gray-800 dark:text-white">
         <div
@@ -114,7 +114,7 @@ const Websites = () => {
       </div>
       <div className="flex justify-center overflow-x-visible">
         <div
-          className={`${styles.scroll} pt-5 pb-10 sm:pb-14 flex w-full px-[50%] snap-mandatory snap-x gap-8 overflow-auto z-10`}
+          className={`${styles.scroll} pt-5 pb-10 sm:pb-8 md:pb-10 2xl:pb-14 flex w-full px-[50%] snap-mandatory snap-x gap-8 overflow-auto z-10`}
         >
           {cards &&
             cards.map((data, index) => <WebsiteCard key={index} data={data} />)}

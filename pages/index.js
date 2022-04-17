@@ -21,45 +21,37 @@ export default function Home() {
         .pfp {
           height: 140px;
           width: 140px;
-          box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
         }
         .test2 {
-          height: 4rem;
-          width: 4rem;
+          height: 3rem;
+          width: 3rem;
         }
-        @media (max-height: 800px) {
+        @media (max-width: 640px) and (max-height: 800px) {
+          .mirror {
+            display: none;
+          }
+          .websites {
+            padding-bottom: 4rem;
+          }
           .pfp {
-            height: 125px;
-            width: 125px;
+            height: 160px;
+            width: 160px;
           }
           .test2 {
-            height: 3rem;
-            width: 3rem;
+            height: 4rem;
+            width: 4rem;
           }
-        }
-        @media (max-height: 735px) {
-          .pfp {
-            height: 100px;
-            width: 100px;
-          }
-          .test2 {
-            height: 2.5rem;
-            width: 2.5rem;
-          }
-          // .sm\:hidden {
-          //   display: none;
-          // }
         }
       `}</style>
-      <div className="min-h-[550px] sm:min-h-[600px] md:min-h-[625px] lg:min-h-[650px] xl:min-h-[700px] h-full flex flex-col">
+      <div className="min-h-[600px] sm:min-h-[525px] md:min-h-[625px] xl:min-h-[650px] h-full flex flex-col">
         <div className="flex flex-1 justify-center items-center sm:hidden">
           <div className="flex flex-col items-center">
             <div className="pfp rounded-full overflow-hidden">
               <Image
                 src={logo}
                 className="rounded-full"
-                width={160}
-                height={160}
+                width={175}
+                height={175}
                 objectFit="cover"
               />
             </div>
@@ -85,10 +77,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="flex-1 flex flex-col justify-center">
+        <div className="websites flex-1 flex flex-col justify-center">
           <Websites />
         </div>
-        <div className="flex justify-center overflow-hidden">
+        <div className="mirror flex justify-center overflow-hidden">
           <MirrorIcons />
         </div>
       </div>
