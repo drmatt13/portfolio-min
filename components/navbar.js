@@ -6,7 +6,7 @@ import logo from "../public/images/image5.png";
 
 const navbar = () => {
   return (
-    <div className="font-mono text-sm md:text-sm lg:text-base xl:text-lg shadow-sm shadow-black/75 noselect sticky top-0 z-50 bg-black/75 backdrop-blur-lg h-16 sm:h-24 w-full pl-8 pr-6 md:px-[4vw] lg:px-14 flex items-center justify-between text-white">
+    <div className="font-mono text-xs sm:text-sm lg:text-base xl:text-lg shadow-sm shadow-black/75 noselect sticky top-0 z-50 bg-black/75 backdrop-blur-lg h-16 sm:h-24 w-full px-4 sm:pl-7 sm:pr-6 md:px-[4vw] lg:px-14 flex items-center justify-between text-white">
       <div className="flex items-center">
         <Link href="/">
           <div className="hidden sm:inline mr-4 md:mr-5 h-12 w-12 md:h-14 md:w-14 lg:h-[3.75rem] lg:w-[3.75rem] shadow-lg rounded-full overflow-hidden text-[0] cursor-pointer">
