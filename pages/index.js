@@ -26,20 +26,18 @@ export default function Home() {
           height: 3rem;
           width: 3rem;
         }
-        @media (max-width: 640px) and (max-height: 800px) {
-          .mirror {
-            display: none;
-          }
-          .websites {
-            padding-bottom: 4rem;
-          }
-          .pfp {
-            height: 160px;
-            width: 160px;
-          }
-          .test2 {
-            height: 4rem;
-            width: 4rem;
+
+        .pfp {
+          height: 160px;
+          width: 160px;
+        }
+        .test2 {
+          height: 4rem;
+          width: 4rem;
+        }
+        @media (max-width: 640px) and (min-height: 875px) {
+          .sm\:hidden {
+            flex: 0;
           }
         }
         @media (max-width: 640px) and (max-height: 750px) {
@@ -53,7 +51,7 @@ export default function Home() {
           }
         }
       `}</style>
-      <div className="min-h-[600px] sm:min-h-[525px] md:min-h-[625px] xl:min-h-[650px] h-full flex flex-col">
+      <div className="min-h-[800px] sm:min-h-[525px] md:min-h-[625px] xl:min-h-[650px] h-full flex flex-col">
         <div className="flex flex-1 justify-center items-center sm:hidden">
           <div className="my-8 flex flex-col items-center">
             <div className="pfp rounded-full overflow-hidden">

@@ -81,7 +81,21 @@ const WebsiteCard = ({
         .scroll::-webkit-scrollbar-track {
           background: rgba(0, 0, 0, 0.125);
         }
-        @media (max-width: 768px) and (min-height: 900px) {
+        @media (max-width: 640px) and (min-height: 875px) {
+          .snap-center {
+            height: 18rem !important;
+            min-width: 14rem !important;
+            border-radius: 0.75rem !important;
+          }
+          .h-32 {
+            height: 9rem !important;
+          }
+          .rounded-t-md {
+            border-top-left-radius: 0.75rem !important;
+            border-top-right-radius: 0.75rem !important;
+          }
+        }
+        @media (min-width: 640px) and (min-height: 950px) {
           .snap-center {
             height: 24rem !important;
             min-width: 18rem !important;
@@ -92,15 +106,22 @@ const WebsiteCard = ({
             border-top-right-radius: 0.75rem !important;
           }
         }
-        @media (max-width: 1024px) and (min-height: 950px) {
+        @media (min-width: 1024px) and (max-height: 750px) {
           .snap-center {
-            height: 24rem !important;
-            min-width: 18rem !important;
-            border-radius: 0.75rem !important;
+            min-width: 14rem !important;
+            height: 20rem !important;
           }
-          .rounded-t-md {
-            border-top-left-radius: 0.75rem !important;
-            border-top-right-radius: 0.75rem !important;
+          .lg\:text-lg {
+            font-size: 1rem !important;
+            line-height: 1.5rem !important;
+          }
+          .lg\:text-sm {
+            font-size: 0.8rem !important;
+            line-height: 1.2rem !important;
+          }
+          .text-sm {
+            font-size: 0.875rem;
+            line-height: 1.25rem;
           }
         }
         @media (min-width: 1024px) and (min-height: 1150px) {
@@ -164,7 +185,7 @@ const WebsiteCard = ({
           }
         }
       `}</style>
-      <div className="snap-center snap-always rounded-lg min-w-[12rem] h-[16.5rem] sm:min-w-[14rem] sm:h-[20rem] lg:min-w-[16rem] lg:h-[22rem] xl:min-w-[17rem] xl:h-[23rem] 2xl:min-w-[18rem] 2xl:h-[24rem]">
+      <div className="cursor-grab snap-center snap-always rounded-lg min-w-[12rem] h-[16.5rem] sm:min-w-[14rem] sm:h-[20rem] lg:min-w-[16rem] lg:h-[22rem] xl:min-w-[17rem] xl:h-[23rem] 2xl:min-w-[18rem] 2xl:h-[24rem]">
         <div
           ref={cardRef}
           onMouseMove={mouseMove}
@@ -192,10 +213,10 @@ const WebsiteCard = ({
           <div className="h-1 w-full bg-blue-500 divider_bar transition-all duration-300" />
           <div className="relative flex-1">
             <div className="extrude absolute top-0 left-0 h-full w-full flex flex-col">
-              <div className="py-2 text-center text-white text-xl sm:text-base lg:text-lg 2xl:text-xl">
+              <div className="cursor-default py-2 text-center text-white text-xl sm:text-base lg:text-lg 2xl:text-xl">
                 {title}
               </div>
-              <div className="hidden sm:inline scroll ml-2.5 pl-1.5 mr-2 flex-[1.2] text-white text-[.8rem] lg:text-sm xl:text-base overflow-y-auto break-words">
+              <div className="cursor-default hidden sm:inline scroll ml-2.5 pl-1.5 mr-2 flex-[1.2] text-white text-[.8rem] lg:text-sm xl:text-base overflow-y-auto break-words">
                 {description}
               </div>
               <div className="flex-1 flex flex-col justify-end">
