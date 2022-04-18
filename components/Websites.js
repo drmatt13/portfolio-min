@@ -102,7 +102,7 @@ const Websites = () => {
 
   return (
     <div className="relative">
-      <div className="absolute top-0 w-full h-full opacity-60 dark:opacity-50 brightness-150 dark:brightness-75 /transform-gpu"></div>
+      <div className="absolute top-0 w-full h-full opacity-60 dark:opacity-50 brightness-150 dark:brightness-75"></div>
       <div className="text-gray-800 dark:text-white">
         <div
           className="text-2xl sm:text-4xl lg:text-5xl text-center"

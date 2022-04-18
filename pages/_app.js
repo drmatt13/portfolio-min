@@ -37,15 +37,12 @@ function MyApp({ Component, pageProps }) {
         <title>Portfolio | Matthew Sweeney</title>
         {/* <meta property="og:url" content="http://www.nytimes.com/2015/02/19/arts/international/when-great-minds-dont-think-alike.html" /> */}
         <meta property="og:site_name" content="Costello Tattoo" />
-        <meta
-          property="og:title"
-          content="Cody Costello - Black & Gray Tattoo Specialist"
-        />
+        <meta property="og:title" content="Matt Sweeney - Portfolio" />
         <meta
           property="og:description"
-          content="Hi, I'm Cody. I am a tattoo artist and this is a generic temp description."
+          content="Hi, I'm Matt. I like to do math & program."
         />
-        <meta property="og:image" content="/images/cody4.jpg" />
+        <meta property="og:image" content="/images/ogimage.png" />
         <meta name="theme-color" content="#3c374a" />
       </Head>
       <style jsx>{`

@@ -60,8 +60,8 @@ export default function Home() {
               <Image
                 src={logo}
                 className="rounded-full"
-                width={175}
-                height={175}
+                width={200}
+                height={200}
                 objectFit="cover"
               />
             </div>
