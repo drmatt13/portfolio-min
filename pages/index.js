@@ -18,18 +18,18 @@ export default function Home() {
         .sm\:hidden {
           padding-top: 1rem;
         }
-        .pfp {
-          height: 140px;
-          width: 140px;
-        }
         .test2 {
           height: 3rem;
           width: 3rem;
         }
-
         .pfp {
           height: 160px;
           width: 160px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        .hover\:scale-110 {
+          box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+            rgba(0, 0, 0, 0.23) 0px 6px 6px;
         }
         .test2 {
           height: 4rem;
@@ -42,8 +42,11 @@ export default function Home() {
         }
         @media (max-width: 640px) and (max-height: 750px) {
           .pfp {
-            height: 140px;
-            width: 140px;
+            height: 155px;
+            width: 155px;
+          }
+          .sm\:hidden {
+            flex: 0 !important;
           }
           .test2 {
             height: 4rem;
@@ -64,22 +67,22 @@ export default function Home() {
               />
             </div>
             <div className="mt-4 flex">
-              <div className="test2 rounded-full hover:scale-110 cursor-pointer transition-transform overflow-hidden noselect">
+              <div className="test2 p-2 cursor-pointer transition-transform overflow-hidden noselect">
                 <img
-                  className="self-center"
-                  src="https://img.icons8.com/color/144/000000/facebook-new.png"
+                  className="hover:scale-110 self-center rounded-full transition-transform"
+                  src="https://i0.wp.com/soundings.com/wp-content/uploads/2021/03/INSTAGRAM-Logo-Round-1000px.png?ssl=1"
                 />
               </div>
-              <div className="ml-2 test2 rounded-full hover:scale-110 cursor-pointer transition-transform overflow-hidden noselect">
+              <div className="ml-2 test2 p-2 cursor-pointer transition-transform overflow-hidden noselect">
                 <img
-                  className="self-center"
-                  src="https://img.icons8.com/fluency/144/000000/instagram-new.png"
+                  className="hover:scale-110 self-center rounded-full transition-transform bg-gradient-to-bl from-emerald-700 to-emerald-400"
+                  src="http://cdn.onlinewebfonts.com/svg/img_258190.png"
                 />
               </div>
-              <div className="ml-2 test2 rounded-full hover:scale-110 cursor-pointer transition-transform overflow-hidden noselect">
+              <div className="ml-2 test2 p-2 rounded-full cursor-pointer transition-transform overflow-hidden noselect">
                 <img
-                  className="self-center"
-                  src="https://img.icons8.com/color/150/000000/tiktok--v1.png"
+                  className="hover:scale-110 self-center rounded-full transition-transform"
+                  src="https://i.pinimg.com/originals/34/91/f3/3491f3e50ab6a4d51a348f9cc2419842.jpg"
                 />
               </div>
             </div>
