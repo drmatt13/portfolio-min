@@ -4,7 +4,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 
 // components
-import Navbar from "../components/Navbar";
+import Navbar from "../components/navbar";
 
 // context
 import _appContext from "../context/_appContext";
