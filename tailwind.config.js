@@ -24,6 +24,9 @@ module.exports = {
         wiggle: "wiggle 1s linear infinite",
         "wiggle-fast": "wiggle .5s linear infinite",
       },
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+      },
       keyframes: {
         "cart-bounce": {
           "0%, 90%, 95%, 100%": { transform: "translate(0.5rem, -0.375rem)" },
