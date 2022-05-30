@@ -9,15 +9,19 @@ import _appContext from "../context/_appContext";
 import logo from "../public/images/image5.png";
 
 const Navbar = () => {
-  const { router } = useContext(_appContext);
+  const { router, isMobile } = useContext(_appContext);
 
   return (
     <div
-      className={`font-mono text-xs sm:text-sm lg:text-base xl:text-lg shadow-md shadow-black/25 noselect sticky top-0 z-50 ${
+      className={`w-screen font-mono text-xs sm:text-sm lg:text-base xl:text-lg shadow-md shadow-black/25 noselect sticky top-0 z-50 ${
         router.pathname === "/" ? "bg-black/75" : "bg-pink-900/10"
-      } backdrop-blur-lg h-16 sm:h-24 w-full px-4 sm:pl-7 sm:pr-6 md:px-[4vw] lg:px-14 flex items-center justify-between text-white`}
+      } backdrop-blur-lg h-16 sm:h-24 ${
+        !isMobile
+          ? "pl-6 pr-8 sm:pl-7 sm:pr-8 md:pr-[5vw]"
+          : "px-4 sm:pl-7 sm:pr-6 -translate-y-1"
+      } md:px-[4vw] lg:px-14 flex items-center justify-between text-white`}
     >
-      <div className="flex items-center">
+      <div className={`flex items-center ${!isMobile ? "" : "translate-y-1"}`}>
         <Link href="/">
           <div className="hidden sm:inline mr-4 md:mr-5 h-12 w-12 md:h-14 md:w-14 lg:h-[3.75rem] lg:w-[3.75rem] shadow-lg rounded-full overflow-hidden text-[0] cursor-pointer">
             <Image
@@ -39,7 +43,7 @@ const Navbar = () => {
           <div className="h-[1.5px] w-0 rounded-sm bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-100 group-hover:w-full transition-all " />
         </div>
       </div>
-      <div className="font-bold flex">
+      <div className={`font-bold flex ${!isMobile ? "" : "translate-y-1"}`}>
         <div className="flex-col cursor-pointer group">
           <Link href="/">
             <>

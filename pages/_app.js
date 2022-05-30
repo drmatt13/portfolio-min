@@ -89,7 +89,7 @@ function MyApp({ Component, pageProps }) {
           className={`relative ${router.pathname === "/" ? "" : "bg-black/90"}`}
         >
           <div className="overflow-hidden">{particles}</div>
-          <div className="relative h-screen overflow-auto">
+          <div className="relative h-screen overflow-y-auto overflow-x-hidden">
             <Navbar />
             <div className="absolute top-0 h-full pt-16 sm:pt-24 w-full flex-1">
               <Component {...pageProps} />
