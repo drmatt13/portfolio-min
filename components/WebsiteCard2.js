@@ -1,11 +1,7 @@
 import { useRef, useContext } from "react";
 import Image from "next/image";
-import Link from "next/link";
 
 import context from "../context/_appContext";
-
-// styles
-import styles from "../styles/Websites.module.scss";
 
 const WebsiteCard = ({
   data: {
@@ -52,8 +48,10 @@ const WebsiteCard = ({
     e.stopPropagation();
     cancelAnimationFrame(animationRef.current);
     timeoutRef.current = setTimeout(() => {
-      cardRef.current.classList.remove("group");
-      cardRef.current.style.setProperty("transform", "perspective(1000px)");
+      if (cardRef.current) {
+        cardRef.current.classList.remove("group");
+        cardRef.current.style.setProperty("transform", "perspective(1000px)");
+      }
     }, 500);
   };
 
@@ -75,9 +73,6 @@ const WebsiteCard = ({
         .scroll::-webkit-scrollbar-thumb {
           background-color: rgba(59 130 246);
         }
-        // .scroll::-webkit-scrollbar-thumb:hover {
-        //   background-color: rgba(99, 102, 241, 0.6);
-        // }
         .scroll::-webkit-scrollbar-track {
           background: rgba(0, 0, 0, 0.125);
         }

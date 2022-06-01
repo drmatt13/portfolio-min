@@ -17,9 +17,9 @@ const Navbar = () => {
         router.pathname === "/" ? "bg-black/75" : "bg-pink-900/10"
       } backdrop-blur-lg h-16 sm:h-24 ${
         !isMobile
-          ? "pl-6 pr-8 sm:pl-7 sm:pr-8 md:pr-[5vw]"
+          ? "pl-6 pr-8 sm:pl-7 sm:pr-12 md:pr-[5vw]"
           : "px-4 sm:pl-7 sm:pr-6 -translate-y-1"
-      } md:px-[4vw] lg:px-14 flex items-center justify-between text-white`}
+      } md:px-[4vw] lg:pr-14 lg:pl-12 flex items-center justify-between text-white`}
     >
       <div className={`flex items-center ${!isMobile ? "" : "translate-y-1"}`}>
         <Link href="/">

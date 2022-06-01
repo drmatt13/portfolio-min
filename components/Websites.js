@@ -35,7 +35,7 @@ const Websites = () => {
       title: "Banned Social",
       description:
         "A unique social media site that serves news and encourages politically charged discourse + arguements; censorship free. Allows users to edit their own profiles, post and comment on posts. Users can also follow other users and see their posts and has a global feed that shows all posts.",
-      link: "https://banned-social.vercel.app",
+      link: "https://banned-social2.vercel.app/",
       button: "Welcome anon",
       dimensions: {
         width: 1200,
