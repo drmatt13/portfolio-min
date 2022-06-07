@@ -54,7 +54,7 @@ export default function Home() {
           }
         }
       `}</style>
-      <div className="min-h-[800px] sm:min-h-[525px] md:min-h-[625px] xl:min-h-[650px] h-full flex flex-col animate-fade-in">
+      <div className="min-h-[800px] sm:min-h-[525px] md:min-h-[625px] xl:min-h-[600px] h-full flex flex-col animate-fade-in">
         <div className="flex flex-1 justify-center items-center sm:hidden">
           <div className="my-8 flex flex-col items-center">
             <div className="pfp rounded-full overflow-hidden">

@@ -180,7 +180,7 @@ const WebsiteCard = ({
           }
         }
       `}</style>
-      <div className="cursor-grab snap-center snap-always rounded-lg min-w-[12rem] h-[16.5rem] sm:min-w-[14rem] sm:h-[20rem] lg:min-w-[16rem] lg:h-[22rem] xl:min-w-[17rem] xl:h-[23rem] 2xl:min-w-[18rem] 2xl:h-[24rem]">
+      <div className="cursor-grab snap-center snap-always rounded-lg min-w-[12rem] h-[16.5rem] sm:min-w-[13rem] sm:h-[18rem] lg:min-w-[16rem] lg:h-[22rem] xl:min-w-[17rem] xl:h-[23rem] 2xl:min-w-[18rem] 2xl:h-[24rem]">
         <div
           ref={cardRef}
           onMouseMove={mouseMove}
@@ -208,7 +208,7 @@ const WebsiteCard = ({
           <div className="h-1 w-full bg-blue-500 divider_bar transition-all duration-300" />
           <div className="relative flex-1">
             <div className="extrude absolute top-0 left-0 h-full w-full flex flex-col">
-              <div className="cursor-default py-2 text-center text-white text-xl sm:text-base lg:text-lg 2xl:text-xl">
+              <div className="cursor-default py-1.5 lg:py-2 text-center text-white text-xl sm:text-base lg:text-lg 2xl:text-xl">
                 {title}
               </div>
               <div className="cursor-default hidden sm:inline scroll ml-2.5 pl-1.5 mr-2 flex-[1.2] text-white text-[.8rem] lg:text-sm xl:text-base overflow-y-auto break-words">
@@ -216,7 +216,7 @@ const WebsiteCard = ({
               </div>
               <div className="flex-1 flex flex-col justify-end">
                 <div
-                  className="button text-white text-sm 2xl:text-xl no-select cursor-pointer mb-2 mt-3 mx-4 py-2 rounded-sm sm:rounded-md text-center bg-blue-500 hover:bg-blue-400 transition-all duration-100 select-none"
+                  className="button text-white text-xs lg:text-sm 2xl:text-xl no-select cursor-pointer mb-2 mt-2 lg:mt-3 mx-4 py-2 rounded-sm sm:rounded-md text-center bg-blue-500 hover:bg-blue-400 transition-all duration-100 select-none"
                   onClick={() => window.open(link, "_blank").focus()}
                 >
                   {button}

@@ -8,7 +8,7 @@ import _appContext from "../context/_appContext";
 // images
 import logo from "../public/images/image5.png";
 
-const Navbar = () => {
+const Navbar = ({ contact, setContact }) => {
   const { router, isMobile } = useContext(_appContext);
 
   return (
@@ -17,13 +17,16 @@ const Navbar = () => {
         router.pathname === "/" ? "bg-black/75" : "bg-pink-900/10"
       } backdrop-blur-lg h-16 sm:h-24 ${
         !isMobile
-          ? "pl-6 pr-8 sm:pl-7 sm:pr-12 md:pr-[5vw]"
+          ? "pl-6 pr-8 sm:pl-7 sm:pr-10 md:pr-[5vw]"
           : "px-4 sm:pl-7 sm:pr-6 -translate-y-1"
       } md:px-[4vw] lg:pr-14 lg:pl-12 flex items-center justify-between text-white`}
     >
       <div className={`flex items-center ${!isMobile ? "" : "translate-y-1"}`}>
         <Link href="/">
-          <div className="hidden sm:inline mr-4 md:mr-5 h-12 w-12 md:h-14 md:w-14 lg:h-[3.75rem] lg:w-[3.75rem] shadow-lg rounded-full overflow-hidden text-[0] cursor-pointer">
+          <div
+            className="hidden sm:inline mr-4 md:mr-5 h-12 w-12 md:h-14 md:w-14 lg:h-[3.75rem] lg:w-[3.75rem] shadow-lg rounded-full overflow-hidden text-[0] cursor-pointer"
+            onClick={() => setContact(false)}
+          >
             <Image
               src={logo}
               className="rounded-full"
@@ -35,38 +38,63 @@ const Navbar = () => {
         </Link>
         <div className="flex flex-col font-bold cursor-pointer transition-all group">
           <Link href="/">
-            <div className="flex">
+            <div className="flex" onClick={() => setContact(false)}>
               <div className="sm:mr-2">Matt Sweeney</div>
               <span className="hidden md:inline">- Full Stack Developer</span>
             </div>
           </Link>
-          <div className="h-[1.5px] w-0 rounded-sm bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-100 group-hover:w-full transition-all " />
+          <div
+            className={`h-[1.5px] w-0 rounded-full bg-gradient-to-r from-transparent via-white to-transparent opacity-0 ${
+              isMobile
+                ? "group-active:opacity-100 group-active:w-full"
+                : "group-hover:opacity-100 group-hover:w-full"
+            } transition-all`}
+          />
         </div>
       </div>
       <div className={`font-bold flex ${!isMobile ? "" : "translate-y-1"}`}>
         <div className="flex-col cursor-pointer group">
           <Link href="/">
-            <>
+            <div onClick={() => setContact(false)}>
               <div>services</div>
-              <div className="h-[1.5px] w-0 rounded-full bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-100 group-hover:w-full transition-all" />
-            </>
-          </Link>
-        </div>
-        <div className="ml-4 md:ml-6 lg:ml-8 cursor-pointer group">
-          <Link href="/about">
-            <div>
-              <div>about me</div>
-              <div className="h-[1.5px] w-0 rounded-full bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-100 group-hover:w-full transition-all" />
+              <div
+                className={`h-[1.5px] w-0 rounded-full bg-gradient-to-r from-transparent via-white to-transparent opacity-0 ${
+                  isMobile
+                    ? "group-active:opacity-100 group-active:w-full"
+                    : "group-hover:opacity-100 group-hover:w-full"
+                } transition-all`}
+              />
             </div>
           </Link>
         </div>
         <div className="ml-4 md:ml-6 lg:ml-8 cursor-pointer group">
-          <Link href="/">
-            <>
-              <div>contact</div>
-              <div className="h-[1.5px] w-0 rounded-full bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-100 group-hover:w-full transition-all" />
-            </>
+          <Link href="/about">
+            <div onClick={() => setContact(false)}>
+              <div>about me</div>
+              <div
+                className={`h-[1.5px] w-0 rounded-full bg-gradient-to-r from-transparent via-white to-transparent opacity-0 ${
+                  isMobile
+                    ? "group-active:opacity-100 group-active:w-full"
+                    : "group-hover:opacity-100 group-hover:w-full"
+                } transition-all`}
+              />
+            </div>
           </Link>
+        </div>
+        <div
+          className="ml-4 md:ml-6 lg:ml-8 cursor-pointer group"
+          onClick={() => setContact(!contact)}
+        >
+          <>
+            <div>contact</div>
+            <div
+              className={`h-[1.5px] w-0 rounded-full bg-gradient-to-r from-transparent via-white to-transparent opacity-0 ${
+                isMobile
+                  ? "group-active:opacity-100 group-active:w-full"
+                  : "group-hover:opacity-100 group-hover:w-full"
+              } transition-all`}
+            />
+          </>
         </div>
       </div>
     </div>

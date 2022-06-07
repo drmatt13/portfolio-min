@@ -39,7 +39,7 @@ const About = () => {
         <div
           className={`relative ${
             isMobile
-              ? "mt-4"
+              ? "mt-2"
               : "flex-[.5] smaller:flex-[.7] sm:flex-[.8] md:flex-[.7] lg:flex-[.6] xl:flex-[.5] my-8"
           }  mx-4 flex items-start`}
         >
@@ -55,13 +55,15 @@ const About = () => {
               <div
                 className={`${styles.scroll} ${
                   isMobile ? "" : "absolute"
-                } w-full h-full top-0 left-0 overflow-x-hidden snap-mandatory snap-x`}
+                } w-full h-full top-0 left-0 overflow-x-hidden`}
               >
                 <div className="w-full">
                   <div
-                    className={`${
+                    className={`
+                    ${styles.scroll}
+                    ${
                       isMobile
-                        ? "flex overflow-x-scroll h-36"
+                        ? "px-[50%] flex overflow-x-scroll h-36 snap-mandatory snap-x"
                         : "grid grid-cols-1 smaller:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-2 px-3 overflow-y-auto"
                     }`}
                   >
@@ -93,8 +95,19 @@ const About = () => {
             isMobile ? "mt-4 mx-4" : "flex-1 my-8 ml-4"
           } flex items-start`}
         >
-          <div className="w-full h-full py-4 p-2 bg-pink-900/10 rounded-lg backdrop-blur-lg flex flex-col animate-fade-in">
-            test
+          <div
+            className={`w-full h-full py-4 p-2 ${
+              isMobile ? "" : "bg-pink-900/10 rounded-lg backdrop-blur-lg"
+            } flex flex-col animate-fade-in`}
+          >
+            <div>
+              Hello, my name is Matthew Sweeney and in October 2022; I will
+              officially have earned my bachelor's degree in data analytics from
+              SNHU. I have been meticulously studying all things web development
+              related for the last 2½ years and am confident in my ability to
+              bring and implement complex ideas to life in elegant ways while
+              also adhering to general design principles.
+            </div>
           </div>
         </div>
       </div>

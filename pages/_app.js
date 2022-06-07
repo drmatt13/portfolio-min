@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 
 // components
 import Navbar from "../components/navbar";
+import ContactModal from "../components/ContactModal";
 
 // context
 import _appContext from "../context/_appContext";
@@ -17,6 +18,7 @@ function MyApp({ Component, pageProps }) {
 
   const [isMobile, setIsMobile] = useState(false);
   const [image, setImage] = useState(undefined);
+  const [contact, setContact] = useState(false);
 
   useEffect(() => {
     if (
@@ -88,9 +90,10 @@ function MyApp({ Component, pageProps }) {
         <div
           className={`relative ${router.pathname === "/" ? "" : "bg-black/90"}`}
         >
+          {contact && <ContactModal setContact={setContact} />}
           <div className="overflow-hidden">{particles}</div>
           <div className="relative h-screen overflow-y-auto overflow-x-hidden">
-            <Navbar />
+            <Navbar contact={contact} setContact={setContact} />
             <div className="absolute top-0 h-full pt-16 sm:pt-24 w-full flex-1">
               <Component {...pageProps} />
             </div>
