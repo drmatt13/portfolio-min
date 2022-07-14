@@ -180,7 +180,7 @@ const WebsiteCard = ({
           }
         }
       `}</style>
-      <div className="cursor-grab snap-center snap-always rounded-lg min-w-[12rem] h-[16.5rem] sm:min-w-[13rem] sm:h-[18rem] lg:min-w-[16rem] lg:h-[22rem] xl:min-w-[17rem] xl:h-[23rem] 2xl:min-w-[18rem] 2xl:h-[24rem]">
+      <div className="snap-center snap-always rounded-lg min-w-[12rem] h-[16.5rem] sm:min-w-[13rem] sm:h-[18rem] lg:min-w-[16rem] lg:h-[22rem] xl:min-w-[17rem] xl:h-[23rem] 2xl:min-w-[18rem] 2xl:h-[24rem]">
         <div
           ref={cardRef}
           onMouseMove={mouseMove}

@@ -47,7 +47,7 @@ const About = () => {
             className={`w-full h-full ${
               isMobile
                 ? "pt-4"
-                : "py-4 bg-pink-900/10 rounded-lg backdrop-blur-lg"
+                : "py-4 bg-pink-700/10 rounded-lg backdrop-blur-lg"
             } p-2 flex flex-col animate-fade-in`}
           >
             <h1 className="text-center mb-4">My Reading List</h1>
@@ -96,18 +96,19 @@ const About = () => {
           } flex items-start`}
         >
           <div
-            className={`w-full h-full py-4 p-2 ${
-              isMobile ? "" : "bg-pink-900/10 rounded-lg backdrop-blur-lg"
-            } flex flex-col animate-fade-in`}
+            className={`w-full h-full ${
+              isMobile ? "" : "bg-pink-700/10 rounded-lg backdrop-blur-lg"
+            } p-2 animate-fade-in`}
           >
-            <div>
+            <div className="h-full w-full bg-pink-400/10 rounded-lg"></div>
+            {/* <div>
               Hello, my name is Matthew Sweeney and in October 2022; I will
               officially have earned my bachelor's degree in data analytics from
               SNHU. I have been meticulously studying all things web development
               related for the last 2½ years and am confident in my ability to
               bring and implement complex ideas to life in elegant ways while
               also adhering to general design principles.
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
