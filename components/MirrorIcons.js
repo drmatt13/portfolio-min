@@ -22,11 +22,8 @@ const MirrorIcons = () => {
           transform: rotate3d(1, 0, 0, 45deg);
           background: linear-gradient(to bottom, #fff1, #2228);
         }
-        // .perspective:hover > div > div {
-        //   animation-play-state: paused;
-        // }
       `}</style>
-      <div className="max-w-3xl xl:max-w-4xl w-[150%] xs:w-[125%] sm:w-full scale-[55%] xs:scale-[70%] sm:scale-75 lg:scale-90 xl:scale-100 h-24 xs:h-32 sm:h-auto translate-y-2 xs:translate-y-[15%] lg:translate-y-2.5 xl:translate-y-0 select-none">
+      <div className="max-w-3xl xl:max-w-4xl w-[110%] xs:w-[125%] sm:w-full scale-[80%] xs:scale-[70%] sm:scale-75 lg:scale-90 xl:scale-100 h-24 xs:h-32 sm:h-auto -translate-y-2 xs:translate-y-[15%] lg:translate-y-2.5 xl:translate-y-0 select-none">
         <div className="w-4" />
         <div className="relative perspective flex items-center">
           <div className={`z-10 relative flex overflow-x-hidden`}>

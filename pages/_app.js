@@ -1,11 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import "../styles/globals.scss";
 import Head from "next/head";
 import { useRouter } from "next/router";
 
 // components
 import Navbar from "../components/navbar";
+import AboutModal from "../components/AboutModal";
 import ContactModal from "../components/ContactModal";
+import ServicesModal from "../components/ServicesModal";
 
 // context
 import _appContext from "../context/_appContext";
@@ -15,10 +17,8 @@ import styles from "../styles/particle.module.scss";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
-
   const [isMobile, setIsMobile] = useState(false);
-  const [image, setImage] = useState(undefined);
-  const [contact, setContact] = useState(false);
+  const [modal, setModal] = useState({ show: false, type: "" });
 
   useEffect(() => {
     if (
@@ -38,11 +38,7 @@ function MyApp({ Component, pageProps }) {
     particles.push(
       <div className={styles["circle-container"]} key={i}>
         <div
-          className={`${styles.circle} bg-gradient-radial ${
-            router.pathname === "/"
-              ? "from-sky-400 via-sky-400/20 to-black/20"
-              : "from-pink-600/80 via-pink-600/10 to-black/20"
-          }`}
+          className={`${styles.circle} bg-gradient-radial from-sky-400 via-sky-400/20 to-black/20`}
         />
       </div>
     );
@@ -86,14 +82,28 @@ function MyApp({ Component, pageProps }) {
         }
       `}</style>
       <img src="\images\photo-1470770841072-f978cf4d019e.jpg" alt="" />
-      <_appContext.Provider value={{ setImage, isMobile, router }}>
-        <div
-          className={`relative ${router.pathname === "/" ? "" : "bg-black/90"}`}
-        >
-          {contact && <ContactModal setContact={setContact} />}
+      <_appContext.Provider value={{ isMobile, router }}>
+        <div className={`relative`}>
+          <div
+            className={`absolute top-0 lef-0 h-full w-full z-50 ${
+              !modal.show ? "pointer-events-none" : ""
+            }`}
+          >
+            <div className="relative w-full h-screen flex justify-center items-center">
+              <div
+                className={`absolute top-0 left-0 h-full w-full ${
+                  modal.show ? "bg-black/25" : ""
+                } transition-colors`}
+                onClick={() => setModal({ show: false, type: "" })}
+              />
+              {modal.type === "about" && <AboutModal />}
+              {modal.type === "contact" && <ContactModal />}
+              {modal.type === "services" && <ServicesModal />}
+            </div>
+          </div>
           <div className="overflow-hidden">{particles}</div>
           <div className="relative h-screen overflow-y-auto overflow-x-hidden">
-            <Navbar contact={contact} setContact={setContact} />
+            <Navbar modal={modal} setModal={setModal} />
             <div className="absolute top-0 h-full pt-16 sm:pt-24 w-full flex-1">
               <Component {...pageProps} />
             </div>

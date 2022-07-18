@@ -2,7 +2,7 @@ import { useState, useContext } from "react";
 
 // components
 // import GlitchText from "./GlitchText";
-import WebsiteCard from "./WebsiteCard2";
+import WebsiteCard from "./WebsiteCard";
 
 // context
 // import _appContext from "../../context/_appContext";
