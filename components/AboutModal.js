@@ -102,11 +102,11 @@ const AboutModal = () => {
                 <div className="h-full w-full">
                   <div>
                     Hello, my name is Matthew Sweeney and in October 2022; I
-                    will officially have earned my bachelor's degree in data
-                    analytics from SNHU. I have been meticulously studying all
-                    things web development related for the last 2½ years and am
-                    confident in my ability to bring and implement complex ideas
-                    to life in elegant ways while also adhering to general
+                    will officially have earned my bachelor&apos;s degree in
+                    data analytics from SNHU. I have been meticulously studying
+                    all things web development related for the last 2½ years and
+                    am confident in my ability to bring and implement complex
+                    ideas to life in elegant ways while also adhering to general
                     design principles.
                   </div>
                 </div>
