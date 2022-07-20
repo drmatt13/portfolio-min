@@ -69,7 +69,7 @@ function MyApp({ Component, pageProps }) {
         alt="background"
       />
       <_appContext.Provider value={{ isMobile, router }}>
-        <div className={`relative`}>
+        <div className={`bg-black/50 absolute top-0 bottom-0`}>
           <div
             className={`absolute top-0 lef-0 h-full w-full z-50 ${
               !modal.show ? "pointer-events-none" : ""
@@ -88,9 +88,9 @@ function MyApp({ Component, pageProps }) {
             </div>
           </div>
           <div className="overflow-hidden">{particles}</div>
-          <div className="relative h-screen overflow-y-auto overflow-x-hidden">
+          <div className="relative h-full overflow-y-auto overflow-x-hidden">
             <Navbar modal={modal} setModal={setModal} />
-            <div className="absolute top-0 h-full h-fill pt-16 sm:pt-24 w-full flex-1">
+            <div className="absolute top-0 h-full pt-16 sm:pt-24 w-full">
               <Component {...pageProps} />
             </div>
           </div>
