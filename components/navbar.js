@@ -38,7 +38,7 @@ const Navbar = ({ modal, setModal }) => {
             className="flex"
             onClick={() => setModal({ show: false, type: "" })}
           >
-            <div className="sm:mr-2">Matt Sweeney</div>
+            <div className="sm:mr-2 font-">Matt Sweeney</div>
             <span className="hidden md:inline">- Full Stack Developer</span>
           </div>
           <div

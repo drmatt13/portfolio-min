@@ -13,8 +13,6 @@ const WebsiteCard = ({
     button,
     dimensions: { width, height },
   },
-  parentRef,
-  flagMemo = {},
 }) => {
   const { isMobile } = useContext(context);
 
@@ -57,9 +55,6 @@ const WebsiteCard = ({
 
   return (
     <>
-      {/* md: "768px",
-      lg: "1024px",
-      xl: "1280px", */}
       <style jsx>{`
         .scroll::-webkit-scrollbar {
           width: 6px;
@@ -144,7 +139,6 @@ const WebsiteCard = ({
             }
           }
         }
-
         @media only screen and (max-width: 400px) {
           div {
             transform: perspective(1000px) translate3d(0, 0, 0) rotateY(0)
@@ -173,7 +167,8 @@ const WebsiteCard = ({
             box-shadow: rgba(0, 0, 0, 1) 0px 5px 15px;
           }
           .group .divider_bar {
-            opacity: 0.1;
+            opacity: 0.05;
+            transition-duration: 150ms;
           }
           .group .button {
             box-shadow: rgba(0, 0, 0, 1) 0px 5px 15px;
@@ -185,7 +180,7 @@ const WebsiteCard = ({
           ref={cardRef}
           onMouseMove={mouseMove}
           onMouseOut={mouseOut}
-          className="flex flex-col justify-between h-full w-full bg-black/50 rounded-lg"
+          className="flex flex-col justify-between h-full w-full bg-black/40 rounded-lg"
           style={{
             transition: "all .4s cubic-bezier(.165, .84, .44, 1)",
           }}

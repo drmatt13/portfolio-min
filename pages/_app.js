@@ -92,7 +92,7 @@ function MyApp({ Component, pageProps }) {
             <div className="relative w-full h-screen flex justify-center items-center">
               <div
                 className={`absolute top-0 left-0 h-full w-full ${
-                  modal.show ? "bg-black/25" : ""
+                  modal.show ? "bg-black/50" : ""
                 } transition-colors`}
                 onClick={() => setModal({ show: false, type: "" })}
               />
