@@ -89,7 +89,7 @@ function MyApp({ Component, pageProps }) {
               !modal.show ? "pointer-events-none" : ""
             }`}
           >
-            <div className="relative w-full h-screen flex justify-center items-center">
+            <div className="relative w-full h-full flex justify-center items-center">
               <div
                 className={`absolute top-0 left-0 h-full w-full ${
                   modal.show ? "bg-black/50" : ""
