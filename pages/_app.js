@@ -63,25 +63,11 @@ function MyApp({ Component, pageProps }) {
         <meta property="og:image" content="/images/ogimage.png" />
         <meta name="theme-color" content="#3c374a" />
       </Head>
-      <style jsx>{`
-        video {
-          object-fit: cover;
-          width: 100vw;
-          height: 100vh;
-          position: fixed;
-          top: 0;
-          left: 0;
-        }
-        img {
-          object-fit: cover;
-          width: 100vw;
-          height: 100vh;
-          position: fixed;
-          top: 0;
-          left: 0;
-        }
-      `}</style>
-      <img src="\images\photo-1470770841072-f978cf4d019e.jpg" alt="" />
+      <img
+        className="object-cover w-screen h-screen fixed top-0 left-0"
+        src="\images\photo-1470770841072-f978cf4d019e.jpg"
+        alt="background"
+      />
       <_appContext.Provider value={{ isMobile, router }}>
         <div className={`relative`}>
           <div
@@ -89,7 +75,7 @@ function MyApp({ Component, pageProps }) {
               !modal.show ? "pointer-events-none" : ""
             }`}
           >
-            <div className="relative w-full h-full flex justify-center items-center">
+            <div className="relative w-full h-screen flex justify-center items-center">
               <div
                 className={`absolute top-0 left-0 h-full w-full ${
                   modal.show ? "bg-black/50" : ""
@@ -104,7 +90,7 @@ function MyApp({ Component, pageProps }) {
           <div className="overflow-hidden">{particles}</div>
           <div className="relative h-screen overflow-y-auto overflow-x-hidden">
             <Navbar modal={modal} setModal={setModal} />
-            <div className="absolute top-0 h-full pt-16 sm:pt-24 w-full flex-1">
+            <div className="absolute top-0 h-full h-fill pt-16 sm:pt-24 w-full flex-1">
               <Component {...pageProps} />
             </div>
           </div>
