@@ -112,7 +112,7 @@ const Websites = () => {
           }}
         ></div>
       </div>
-      <div className="flex justify-center overflow-x-visible">
+      <div className="flex justify-center">
         <div
           className={`${styles.scroll} pt-5 pb-10 sm:pb-8 md:pb-10 2xl:pb-14 flex w-full px-[50%] snap-mandatory snap-x gap-8 overflow-auto z-10`}
         >

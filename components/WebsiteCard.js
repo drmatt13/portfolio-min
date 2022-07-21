@@ -175,17 +175,17 @@ const WebsiteCard = ({
           }
         }
       `}</style>
-      <div className="snap-center snap-always rounded-lg min-w-[12rem] h-[16.5rem] xs:min-w-[13rem] xs:h-[18rem] lg:min-w-[16rem] lg:h-[22rem] xl:min-w-[17rem] xl:h-[23rem] 2xl:min-w-[18rem] 2xl:h-[24rem]">
+      <div className="snap-center snap-always rounded-lg min-w-[12rem] h-[16.5rem] xs:min-w-[13rem] xs:h-[18rem] lg:min-w-[16rem] lg:h-[22rem] xl:min-w-[17rem] xl:h-[23rem] 2xl:min-w-[18rem] 2xl:h-[24rem] bg-black/50 backdrop-blur-md animate-fade-in">
         <div
           ref={cardRef}
           onMouseMove={mouseMove}
           onMouseOut={mouseOut}
-          className="flex flex-col justify-between h-full w-full bg-black/40 rounded-lg"
+          className="flex flex-col justify-between h-full w-full rounded-lg"
           style={{
             transition: "all .4s cubic-bezier(.165, .84, .44, 1)",
           }}
         >
-          <div className="relative flex min-h-[1%] h-32 xs:flex-[1.1] transition-all ease-in select-none">
+          <div className="relative flex min-h-[1%] h-32 xs:flex-1 transition-all ease-in select-none">
             <div className="extrude image_container flex w-full rounded-t-lg overflow-hidden">
               <Image
                 src={src}
@@ -199,8 +199,6 @@ const WebsiteCard = ({
               />
             </div>
           </div>
-
-          <div className="h-1 w-full bg-blue-500 divider_bar transition-all duration-300" />
           <div className="relative flex-1">
             <div className="extrude absolute top-0 left-0 h-full w-full flex flex-col">
               <div className="cursor-default py-1.5 lg:py-2 text-center text-white text-xl xs:text-base lg:text-lg 2xl:text-xl">

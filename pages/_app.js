@@ -46,10 +46,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <meta
-          name="viewport"
-          content="width=device-width,initial-scale=1.0,user-scalable=no"
-        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* <link rel="preconnect" href="https://fonts.googleapis.com" /> */}
         {/* <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin /> */}
         <title>Portfolio | Matthew Sweeney</title>
@@ -71,7 +68,7 @@ function MyApp({ Component, pageProps }) {
       <_appContext.Provider value={{ isMobile, router }}>
         <div className={`absolute top-0 bottom-0`}>
           <div
-            className={`absolute top-0 lef-0 h-full w-full z-50 ${
+            className={`absolute top-0 left-0 h-full w-full z-50 ${
               !modal.show ? "pointer-events-none" : ""
             }`}
           >

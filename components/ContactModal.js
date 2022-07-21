@@ -3,7 +3,7 @@ import React from "react";
 const ContactModal = () => {
   return (
     <div>
-      <div className="bg-white/40 p-4 flex flex-col backdrop-blur-md w-[300px] shadow-lg rounded-lg animate-fade-in">
+      <div className="bg-white/40 py-4 px-2 flex flex-col backdrop-blur-md w-[300px] shadow-lg rounded-lg animate-fade-in">
         <div className="mb-2 text-center text-xl font-semibold">Contact Me</div>
         <p className="mb-4 text-center mx-8 text-sm">
           Please contact me for any service inquiries or questions.
