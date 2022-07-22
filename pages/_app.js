@@ -87,7 +87,7 @@ function MyApp({ Component, pageProps }) {
       <_appContext.Provider value={{ isMobile, router }}>
         <div className={`absolute top-0 bottom-0`}>
           <div
-            className={`absolute top-0 left-0 h-full h-fill w-full z-50 ${
+            className={`absolute top-0 left-0 h-full w-full z-50 ${
               !modal.show ? "pointer-events-none" : ""
             }`}
           >
