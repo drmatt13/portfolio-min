@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import "../styles/globals.scss";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 // components
 import Navbar from "../components/navbar";
@@ -14,6 +15,10 @@ import _appContext from "../context/_appContext";
 
 // styles
 import styles from "../styles/particle.module.scss";
+
+// backgrounds
+import background1 from "../public/images/photo-1470770841072-f978cf4d019e.jpg";
+import background2 from "../public/images/07_UndergroundLakes__SonDoongCave_shutterstock_1487628662-fodors.jpg";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -46,9 +51,10 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        {/* <link rel="preconnect" href="https://fonts.googleapis.com" /> */}
-        {/* <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin /> */}
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, user-scalable=no"
+        />
         <title>Portfolio | Matthew Sweeney</title>
         {/* <meta property="og:url" content="http://www.nytimes.com/2015/02/19/arts/international/when-great-minds-dont-think-alike.html" /> */}
         <meta property="og:site_name" content="Costello Tattoo" />
@@ -60,15 +66,28 @@ function MyApp({ Component, pageProps }) {
         <meta property="og:image" content="/images/ogimage.png" />
         <meta name="theme-color" content="#3c374a" />
       </Head>
-      <img
-        className="object-cover w-screen h-screen fixed top-0 left-0"
-        src="\images\photo-1470770841072-f978cf4d019e.jpg"
-        alt="background"
-      />
+      <div className="fixed top-0 left-0 bg-black h-full w-full">
+        <Image
+          src={background1}
+          alt="background1"
+          height={1080}
+          width={1920}
+          layout="fill"
+          objectFit="cover"
+        />
+        {/* <Image
+          src={background2}
+          alt="backgroun2"
+          height={1200}
+          width={1800}
+          layout="fill"
+          objectFit="cover"
+        /> */}
+      </div>
       <_appContext.Provider value={{ isMobile, router }}>
         <div className={`absolute top-0 bottom-0`}>
           <div
-            className={`absolute top-0 left-0 h-full w-full z-50 ${
+            className={`absolute top-0 left-0 h-full h-fill w-full z-50 ${
               !modal.show ? "pointer-events-none" : ""
             }`}
           >

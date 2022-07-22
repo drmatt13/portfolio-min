@@ -47,26 +47,31 @@ const services = [
     src: dataStructures,
     alt: "dataStructures",
     title: "Data Structures",
+    text: "Predominantly utilize express js and can implement routers, controllers, middleware, and error handling—experience with developing microcontrollers, event buses, and REST APIs for various applications.",
   },
   {
     src: database,
     alt: "database",
     title: "Database Stratagy",
+    text: "Predominantly utilize express js and can implement routers, controllers, middleware, and error handling—experience with developing microcontrollers, event buses, and REST APIs for various applications.",
   },
   {
     src: cloud,
     alt: "cloud",
     title: "Cloud Computing",
+    text: "Predominantly utilize express js and can implement routers, controllers, middleware, and error handling—experience with developing microcontrollers, event buses, and REST APIs for various applications.",
   },
   {
     src: ads,
     alt: "ads",
     title: "Ads & Monitization",
+    text: "Predominantly utilize express js and can implement routers, controllers, middleware, and error handling—experience with developing microcontrollers, event buses, and REST APIs for various applications.",
   },
   {
     src: seo,
     alt: "seo",
     title: "Search Engine Optimization",
+    text: "Predominantly utilize express js and can implement routers, controllers, middleware, and error handling—experience with developing microcontrollers, event buses, and REST APIs for various applications.",
   },
 ];
 

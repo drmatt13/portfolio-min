@@ -20,10 +20,15 @@ const ContactModal = () => {
               placeholder="email"
               className="mb-3 px-2 py-1 w-[90%] rounded active:ring-1 focus:ring ring-pink-400/75 outline-0"
             />
-            <textarea
+            {/* <textarea
               type="text"
               placeholder="message"
-              className="mb-3 px-2 py-1 w-[90%] h-32 resize-none rounded focus:ring ring-pink-400/75 outline-0"
+              className="mb-3 px-2 py-1 w-[90%] h-32 resize-none rounded "
+            /> */}
+            <input
+              type="text"
+              placeholder="message"
+              className="h-32 mb-3 px-2 py-1 w-[90%] rounded active:ring-1 focus:ring ring-pink-400/75 outline-0"
             />
             <input
               type="submit"
