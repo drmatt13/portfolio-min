@@ -66,7 +66,7 @@ function MyApp({ Component, pageProps }) {
         <meta property="og:image" content="/images/ogimage.png" />
         <meta name="theme-color" content="#3c374a" />
       </Head>
-      <div className="fixed top-0 left-0 bg-black h-full w-full">
+      <div className="fixed top-0 left-0 bg-black h-full h-fill w-full">
         <Image
           src={background1}
           alt="background1"
