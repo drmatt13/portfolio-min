@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import "../styles/globals.scss";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import Image from "next/image";
+import Image from "next/future/image";
 
 // components
 import Navbar from "../components/navbar";
@@ -66,14 +66,15 @@ function MyApp({ Component, pageProps }) {
         <meta property="og:image" content="/images/ogimage.png" />
         <meta name="theme-color" content="#3c374a" />
       </Head>
-      <div className="fixed top-0 left-0 bg-black h-full h-fill w-full">
+      <div className="fixed top-0 left-0 bg-black h-full w-full">
         <Image
+          className="h-full object-cover"
           src={background1}
           alt="background1"
           height={1080}
           width={1920}
-          layout="fill"
-          objectFit="cover"
+          // layout="fill"
+          // objectFit="cover"
         />
         {/* <Image
           src={background2}
@@ -86,8 +87,16 @@ function MyApp({ Component, pageProps }) {
       </div>
       <_appContext.Provider value={{ isMobile, router }}>
         <div className={`absolute top-0 bottom-0`}>
+          <div className="overflow-hidden">{particles}</div>
+          <div className="relative h-full w-screen overflow-y-auto overflow-x-hidden">
+            <Navbar modal={modal} setModal={setModal} />
+            <div className="absolute top-0 h-full pt-16 sm:pt-24 w-full z-0">
+              <Component {...pageProps} />
+            </div>
+          </div>
+
           <div
-            className={`absolute top-0 left-0 h-full w-full z-50 ${
+            className={`absolute top-0 left-0 h-full w-full ${
               !modal.show ? "pointer-events-none" : ""
             }`}
           >
@@ -98,16 +107,11 @@ function MyApp({ Component, pageProps }) {
                 } transition-colors`}
                 onClick={() => setModal({ show: false, type: "" })}
               />
-              {modal.type === "about" && <AboutModal />}
-              {modal.type === "contact" && <ContactModal />}
-              {modal.type === "services" && <ServicesModal />}
-            </div>
-          </div>
-          <div className="overflow-hidden">{particles}</div>
-          <div className="relative h-full w-screen overflow-y-auto overflow-x-hidden">
-            <Navbar modal={modal} setModal={setModal} />
-            <div className="absolute top-0 h-full pt-16 sm:pt-24 w-full">
-              <Component {...pageProps} />
+              <div>
+                {modal.type === "about" && <AboutModal />}
+                {modal.type === "contact" && <ContactModal />}
+                {modal.type === "services" && <ServicesModal />}
+              </div>
             </div>
           </div>
         </div>
