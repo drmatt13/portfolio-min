@@ -68,25 +68,22 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <div className="fixed top-0 left-0 bg-black h-full w-full">
         <Image
-          className="h-full object-cover"
+          className="h-full h-fill object-cover"
           src={background1}
           alt="background1"
           height={1080}
           width={1920}
-          // layout="fill"
-          // objectFit="cover"
         />
         {/* <Image
+          className="h-full object-cover"
           src={background2}
           alt="backgroun2"
           height={1200}
-          width={1800}
-          layout="fill"
-          objectFit="cover"
-        /> */}
+          width={1800} */}
+        />
       </div>
       <_appContext.Provider value={{ isMobile, router }}>
-        <div className={`absolute top-0 bottom-0`}>
+        <div className={`absolute inset-0 h-full`}>
           <div className="overflow-hidden">{particles}</div>
           <div className="relative h-full w-screen overflow-y-auto overflow-x-hidden">
             <Navbar modal={modal} setModal={setModal} />
