@@ -1,6 +1,9 @@
 import React from "react";
 import Image from "next/image";
 
+// styles
+import styles from "../styles/scroll.module.scss";
+
 // images
 import ux from "../public/images/services/000-Web-UI-Design.png";
 import backend from "../public/images/services/node-js-guide-seo.jpg";
@@ -77,8 +80,10 @@ const services = [
 
 const AboutModal = () => {
   return (
-    <div className="rounded-lg overflow-hidden">
-      <div className="[&>div:last-of-type]:mb-0 overflow-y-auto bg-white/40 py-3 pl-3 pr-3 flex flex-col backdrop-blur-md max-h-[75vh] max-w-[90vw] w-[450px] shadow-lg animate-fade-in">
+    <div
+      className={`${styles.scroll} rounded-lg overflow-hidden backdrop-blur-md bg-white/40 shadow-lg animate-fade-in pr-1.5`}
+    >
+      <div className="[&>div:last-of-type]:mb-0 overflow-y-scroll max-h-[75vh] max-w-[90vw] w-[450px] py-3 pl-3 pr-1.5 flex flex-col ">
         {services.map((service, key) => (
           <div className="mb-2 w-full flex" key={key}>
             <div className="h-20">
