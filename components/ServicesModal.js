@@ -15,6 +15,7 @@ import analyze from "../public/images/services/SNHU-Stacked-Blue-Logo-.jpg";
 import seo from "../public/images/services/1603954182-seo-article-header.jpg";
 import ads from "../public/images/services/ads.png";
 import typescript from "../public/images/services/uf3a8y7xh8aroo95qocz.webp";
+import solidity from "../public/images/services/defi-series-smart-contract.jpg";
 
 const services = [
   // {
@@ -56,6 +57,12 @@ const services = [
     src: database,
     alt: "database",
     title: "Database Stratagy",
+    text: "Predominantly utilize express js and can implement routers, controllers, middleware, and error handling—experience with developing microcontrollers, event buses, and REST APIs for various applications.",
+  },
+  {
+    src: solidity,
+    alt: "solidity",
+    title: "Solidity",
     text: "Predominantly utilize express js and can implement routers, controllers, middleware, and error handling—experience with developing microcontrollers, event buses, and REST APIs for various applications.",
   },
   {
