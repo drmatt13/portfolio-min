@@ -68,7 +68,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <div className="fixed top-0 left-0 bg-black h-full w-full">
         <Image
-          className="h-full h-fill object-cover"
+          className="h-full w-full h-fill object-cover"
           src={background1}
           alt="background1"
           height={1080}
