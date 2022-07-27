@@ -78,7 +78,7 @@ function MyApp({ Component, pageProps }) {
         <div>
           <div className="overflow-hidden">{particles}</div>
           {/* ********************************************************************************************************* */}
-          <div className="relative h-screen w-screen h-fill overflow-y-auto overflow-x-hidden z-0">
+          <div className="absolute inset-0 overflow-y-auto overflow-x-hidden z-0">
             <Navbar modal={modal} setModal={setModal} />
             <div className="absolute inset-0 pt-16 sm:pt-24 z-0">
               <Component {...pageProps} />
