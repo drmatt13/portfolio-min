@@ -175,12 +175,12 @@ const WebsiteCard = ({
           }
         }
       `}</style>
-      <div className="snap-center snap-always rounded-lg min-w-[12rem] h-[16.5rem] xs:min-w-[13rem] xs:h-[18rem] lg:min-w-[16rem] lg:h-[22rem] xl:min-w-[17rem] xl:h-[23rem] 2xl:min-w-[18rem] 2xl:h-[24rem] bg-black/50 backdrop-blur-md animate-fade-in">
+      <div className="snap-center snap-always rounded-lg min-w-[12rem] h-[16.5rem] xs:min-w-[13rem] xs:h-[18rem] lg:min-w-[16rem] lg:h-[22rem] xl:min-w-[17rem] xl:h-[23rem] 2xl:min-w-[18rem] 2xl:h-[24rem] backdrop-blur-md animate-fade-in">
         <div
           ref={cardRef}
           onMouseMove={mouseMove}
           onMouseOut={mouseOut}
-          className="flex flex-col justify-between h-full w-full rounded-lg"
+          className="flex flex-col justify-between h-full w-full rounded-lg bg-black/50"
           style={{
             transition: "all .4s cubic-bezier(.165, .84, .44, 1)",
           }}

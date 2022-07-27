@@ -64,24 +64,27 @@ function MyApp({ Component, pageProps }) {
         <meta property="og:image" content="/images/ogimage.png" />
         <meta name="theme-color" content="#3c374a" />
       </Head>
-      <div className="fixed top-0 left-0 bg-black h-full w-full">
+      <div className="fixed top-0 left-0 right-0 h-screen w-screen h-fill">
         <Image
-          className="h-screen w-screen object-cover"
+          className="h-full w-full object-cover"
           src={background1}
           alt="background1"
+          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gIoSUNDX1BST0ZJTEUAAQEAAAIYAAAAAAQwAABtbnRyUkdCIFhZWiAAAAAAAAAAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAAHRyWFlaAAABZAAAABRnWFlaAAABeAAAABRiWFlaAAABjAAAABRyVFJDAAABoAAAAChnVFJDAAABoAAAAChiVFJDAAABoAAAACh3dHB0AAAByAAAABRjcHJ0AAAB3AAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAFgAAAAcAHMAUgBHAEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFhZWiAAAAAAAABvogAAOPUAAAOQWFlaIAAAAAAAAGKZAAC3hQAAGNpYWVogAAAAAAAAJKAAAA+EAAC2z3BhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABYWVogAAAAAAAA9tYAAQAAAADTLW1sdWMAAAAAAAAAAQAAAAxlblVTAAAAIAAAABwARwBvAG8AZwBsAGUAIABJAG4AYwAuACAAMgAwADEANv/bAEMAFA4PEg8NFBIQEhcVFBgeMiEeHBwePSwuJDJJQExLR0BGRVBac2JQVW1WRUZkiGVtd3uBgoFOYI2XjH2Wc36BfP/bAEMBFRcXHhoeOyEhO3xTRlN8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fP/AABEIAKsBMAMBIgACEQEDEQH/xAAVAAEBAAAAAAAAAAAAAAAAAAAABP/EABQQAQAAAAAAAAAAAAAAAAAAAAD/xAAVAQEBAAAAAAAAAAAAAAAAAAAAA//EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AJQFUQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH//2Q=="
           height={1080}
           width={1920}
         />
       </div>
-      {/* <_appContext.Provider value={{ isMobile, router }}>
-        <div className={`absolute inset-0 h-full`}>
-          <div className="overflow-hidden">{particles}</div>
-          <div className="relative h-screen w-screen overflow-y-auto overflow-x-hidden z-0">
+      <_appContext.Provider value={{ isMobile, router }}>
+        <div>
+          {/* <div className="overflow-hidden">{particles}</div> */}
+          {/* ********************************************************************************************************* */}
+          <div className="relative h-[100vh] w-screen overflow-y-auto overflow-x-hidden z-0">
             <Navbar modal={modal} setModal={setModal} />
-            <div className="absolute top-0 h-full pt-16 sm:pt-24 w-full z-0">
+            <div className="absolute inset-0 pt-16 sm:pt-24 z-0">
               <Component {...pageProps} />
             </div>
           </div>
+          {/* ********************************************************************************************************* */}
           <div
             className={`absolute top-0 left-0 h-full w-full ${
               !modal.show ? "pointer-events-none" : ""
@@ -101,8 +104,9 @@ function MyApp({ Component, pageProps }) {
               </div>
             </div>
           </div>
+          {/* ********************************************************************************************************* */}
         </div>
-      </_appContext.Provider> */}
+      </_appContext.Provider>
     </>
   );
 }
