@@ -18,7 +18,7 @@ import styles from "../styles/particle.module.scss";
 
 // backgrounds
 import background1 from "../public/images/photo-1470770841072-f978cf4d019e.jpg";
-import background2 from "../public/images/07_UndergroundLakes__SonDoongCave_shutterstock_1487628662-fodors.jpg";
+// import background2 from "../public/images/07_UndergroundLakes__SonDoongCave_shutterstock_1487628662-fodors.jpg";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -56,12 +56,10 @@ function MyApp({ Component, pageProps }) {
           content="width=device-width, initial-scale=1, user-scalable=no"
         />
         <title>Portfolio | Matthew Sweeney</title>
-        {/* <meta property="og:url" content="http://www.nytimes.com/2015/02/19/arts/international/when-great-minds-dont-think-alike.html" /> */}
-        <meta property="og:site_name" content="Costello Tattoo" />
         <meta property="og:title" content="Matt Sweeney - Portfolio" />
         <meta
           property="og:description"
-          content="Hi, I'm Matt. I like to do math & program."
+          content="Hi, I'm Matthew. I am a full-stack developing, 2022 Data Analytics graduate from SNHU"
         />
         <meta property="og:image" content="/images/ogimage.png" />
         <meta name="theme-color" content="#3c374a" />
@@ -74,15 +72,8 @@ function MyApp({ Component, pageProps }) {
           height={1080}
           width={1920}
         />
-        {/* <Image
-          className="h-full object-cover"
-          src={background2}
-          alt="backgroun2"
-          height={1200}
-          width={1800}
-        /> */}
       </div>
-      <_appContext.Provider value={{ isMobile, router }}>
+      {/* <_appContext.Provider value={{ isMobile, router }}>
         <div className={`absolute inset-0 h-full`}>
           <div className="overflow-hidden">{particles}</div>
           <div className="relative h-screen w-screen overflow-y-auto overflow-x-hidden z-0">
@@ -111,7 +102,7 @@ function MyApp({ Component, pageProps }) {
             </div>
           </div>
         </div>
-      </_appContext.Provider>
+      </_appContext.Provider> */}
     </>
   );
 }
