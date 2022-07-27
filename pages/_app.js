@@ -79,8 +79,8 @@ function MyApp({ Component, pageProps }) {
           src={background2}
           alt="backgroun2"
           height={1200}
-          width={1800} */}
-        />
+          width={1800}
+        /> */}
       </div>
       <_appContext.Provider value={{ isMobile, router }}>
         <div className={`absolute inset-0 h-full`}>
