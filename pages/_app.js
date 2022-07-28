@@ -82,11 +82,14 @@ function MyApp({ Component, pageProps }) {
             <Navbar modal={modal} setModal={setModal} />
             <div className="absolute inset-0 pt-16 sm:pt-24 z-0">
               <Component {...pageProps} />
+              {/* TEST */}
+              <div className="h-32 w-full bg-black"></div>
+              {/* TEST */}
             </div>
           </div>
           {/* ********************************************************************************************************* */}
           <div
-            className={`absolute top-0 left-0 h-full w-full ${
+            className={`fixed top-0 left-0 h-full w-full ${
               !modal.show ? "pointer-events-none" : ""
             }`}
           >
