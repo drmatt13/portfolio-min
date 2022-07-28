@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Image from "next/future/image";
 
-import Navbar from "./navbar";
+import Navbar from "./DesktopNavbar";
 import AboutModal from "./AboutModal";
 import ContactModal from "./ContactModal";
 import ServicesModal from "./ServicesModal";

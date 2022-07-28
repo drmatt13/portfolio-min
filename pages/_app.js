@@ -9,6 +9,7 @@ import _appContext from "../context/_appContext";
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
   const [isMobile, setIsMobile] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
     if (
@@ -21,6 +22,20 @@ function MyApp({ Component, pageProps }) {
     ) {
       setIsMobile(true);
     }
+    // tailwind dark mode
+    if (
+      localStorage.theme === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      document.documentElement.classList.add("dark");
+      localStorage.theme = "dark";
+      setDarkMode(true);
+    } else {
+      document.documentElement.classList.remove("dark");
+      localStorage.theme = "light";
+      setDarkMode(false);
+    }
   }, []);
 
   return (
@@ -32,7 +47,7 @@ function MyApp({ Component, pageProps }) {
           content="width=device-width, initial-scale=1, user-scalable=no"
         />
       </Head>
-      <_appContext.Provider value={{ isMobile, router }}>
+      <_appContext.Provider value={{ isMobile, router, darkMode, setDarkMode }}>
         <Component {...pageProps} />
       </_appContext.Provider>
     </>
