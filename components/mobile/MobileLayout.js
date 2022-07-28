@@ -1,10 +1,14 @@
 import { useContext } from "react";
 
+// components
+import ContactModal from "../ContactModal";
+import ServicesModal from "../ServicesModal";
+
 // context
 import _appContext from "../../context/_appContext";
 
 const MobileLayout = ({ children }) => {
-  const { darkMode, setDarkMode } = useContext(_appContext);
+  const { darkMode, setDarkMode, modal, setModal } = useContext(_appContext);
 
   const toggleDarkMode = () => {
     if (
@@ -60,11 +64,13 @@ const MobileLayout = ({ children }) => {
       `}</style>
       <div className={`${darkMode ? "dark" : "light"} flex justify-center`}>
         <div className="relative h-screen overflow-y-hidden w-full max-w-[240rem]">
-          <div className="z-50 h-28 sticky py-8 pr-8 flex flex-row-reverse pointer-events-none noselect">
+          <div className="z-10 h-28 sticky py-8 pr-8 flex flex-row-reverse pointer-events-none noselect">
             <div className="w-10 h-10">
               <i
                 onClick={toggleDarkMode}
-                className={`fa-solid bg-black/50 pointer-events-auto cursor-pointer active:scale-90 active:bg-black/75 transition-all text-lg flex justify-center items-center h-full w-full rounded-full ${
+                className={`fa-solid bg-black/50 cursor-pointer active:scale-90 active:bg-black/75 transition-all text-lg flex justify-center items-center h-full w-full rounded-full 
+                ${!modal.show ? "pointer-events-auto" : "opacity-50"}
+                ${
                   darkMode
                     ? "fa-moon text-purple-500 active:text-purple-400"
                     : "fa-sun text-orange-400 /active:text-yellow-400"
@@ -79,6 +85,26 @@ const MobileLayout = ({ children }) => {
             {children}
           </div>
         </div>
+        {/* TEST */}
+        <div
+          className={`absolute top-0 left-0 h-full w-full ${
+            !modal.show ? "pointer-events-none" : ""
+          }`}
+        >
+          <div className="relative w-full h-screen flex justify-center items-center pt-8 sm:pt-12">
+            <div
+              className={`absolute top-0 left-0 h-full w-full ${
+                modal.show ? "bg-black/50" : ""
+              } transition-colors`}
+              onClick={() => setModal({ show: false, type: "" })}
+            />
+            <div>
+              {modal.type === "contact" && <ContactModal />}
+              {modal.type === "services" && <ServicesModal />}
+            </div>
+          </div>
+        </div>
+        {/* TEST */}
       </div>
     </>
   );

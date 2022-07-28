@@ -1,5 +1,4 @@
 import { useContext } from "react";
-import Link from "next/link";
 
 // components
 import MirrorIcons from "./MirrorIcons";
@@ -12,7 +11,7 @@ import _appContext from "../../context/_appContext";
 import styles from "../../styles/Intro.module.scss";
 
 const Intro = () => {
-  const { darkMode } = useContext(_appContext);
+  const { darkMode, setModal } = useContext(_appContext);
 
   return (
     <div className={darkMode ? styles.dark : styles.light} id="home">
@@ -24,24 +23,23 @@ const Intro = () => {
           }}
         />
         <div className="absolute flex flex-col sm:flex-row-reverse bottom-4 right-6 md:bottom-5 md:right-10 lg:bottom-6 lg:right-12">
-          <Link href="#getintouch" passHref>
-            <div
-              className={`${styles.rainbow_button} flex justify-center items-center py-3 px-4 text-xs md:py-3 md:px-6 md:text-sm lg:py-4 lg:px-8 lg:text-base bg-blue-500 dark:bg-pink-500 text-white font-bold select-none cursor-pointer noselect active:scale-105 active:shadow-xl transition-transform`}
-              style={{
-                transitionProperty:
-                  "background-color, border-color, color, fill, stroke, transform",
-              }}
-            >
-              GET IN TOUCH
-            </div>
-          </Link>
-          <Link href="#about" passHref>
-            <div
-              className={`${styles.rainbow_button} flex justify-center items-center mt-2 sm:mt-0 sm:mr-4 py-3 px-4 text-xs md:py-3 md:px-6 md:text-sm lg:py-4 lg:px-8 lg:text-base bg-black dark:bg-gray-900 text-white font-bold select-none cursor-pointer noselect active:scale-105 active:shadow-xl transition-transform`}
-            >
-              ABOUT ME
-            </div>
-          </Link>
+          <div
+            onClick={() => setModal({ show: true, type: "contact" })}
+            className={`${styles.rainbow_button} flex justify-center items-center py-3 px-4 text-xs md:py-3 md:px-6 md:text-sm lg:py-4 lg:px-8 lg:text-base bg-pink-500 text-white font-bold select-none cursor-pointer noselect active:scale-105 active:shadow-xl transition-all`}
+            style={{
+              transitionProperty:
+                "background-color, border-color, color, fill, stroke, transform",
+            }}
+          >
+            GET IN TOUCH
+          </div>
+
+          <div
+            onClick={() => setModal({ show: true, type: "services" })}
+            className={`${styles.rainbow_button} flex justify-center items-center mt-2 sm:mt-0 sm:mr-4 py-3 px-4 text-xs md:py-3 md:px-6 md:text-sm lg:py-4 lg:px-8 lg:text-base bg-black /dark:bg-gray-900 text-white font-bold select-none cursor-pointer noselect active:scale-105 active:shadow-xl transition-transform`}
+          >
+            SERVICES
+          </div>
         </div>
         <div className="flex flex-col sm:w-[50%]">
           <div className="flex-[7] flex items-center justify-center text-gray-800 dark:text-white">

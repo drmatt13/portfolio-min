@@ -1,6 +1,11 @@
-import { useEffect } from "react";
+import { useEffect, useContext } from "react";
+
+// context
+import _appContext from "../context/_appContext";
 
 export default function Home() {
+  const { router } = useContext(_appContext);
+
   useEffect(() => {
     let route =
       /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(
@@ -12,7 +17,8 @@ export default function Home() {
         ? "/mobile"
         : "/desktop";
     document.cookie = `route=${route}; expires=Fri, 31 Dec 9999 23:59:59 GMT`;
-  }, []);
+    router.reload();
+  }, [router]);
 
   return <></>;
 }

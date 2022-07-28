@@ -10,6 +10,7 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter();
   const [isMobile, setIsMobile] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
+  const [modal, setModal] = useState({ show: false, type: "" });
 
   useEffect(() => {
     if (
@@ -47,7 +48,9 @@ function MyApp({ Component, pageProps }) {
           content="width=device-width, initial-scale=1, user-scalable=no"
         />
       </Head>
-      <_appContext.Provider value={{ isMobile, router, darkMode, setDarkMode }}>
+      <_appContext.Provider
+        value={{ isMobile, router, darkMode, setDarkMode, modal, setModal }}
+      >
         <Component {...pageProps} />
       </_appContext.Provider>
     </>

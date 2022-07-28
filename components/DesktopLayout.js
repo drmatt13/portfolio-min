@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import Image from "next/future/image";
 
 import Navbar from "./DesktopNavbar";
@@ -9,6 +9,9 @@ import ServicesModal from "./ServicesModal";
 // backgrounds
 import background1 from "../public/images/photo-1470770841072-f978cf4d019e.jpg";
 // import background2 from "../public/images/07_UndergroundLakes__SonDoongCave_shutterstock_1487628662-fodors.jpg";
+
+// context
+import _appContext from "../context/_appContext";
 
 // styles
 import styles from "../styles/particle.module.scss";
@@ -24,7 +27,7 @@ for (let i = 0; i < 100; i++)
   );
 
 const DesktopLayout = ({ children }) => {
-  const [modal, setModal] = useState({ show: false, type: "" });
+  const { modal, setModal } = useContext(_appContext);
 
   return (
     <>
