@@ -60,13 +60,11 @@ const MobileLayout = ({ children }) => {
       `}</style>
       <div className={`${darkMode ? "dark" : "light"} flex justify-center`}>
         <div className="relative h-screen overflow-y-hidden w-full max-w-[240rem]">
-          <div className="z-50 h-28 sticky py-10 pr-8 xs:pr-10 sm:pr-14 lg:pr-20 flex flex-row-reverse pointer-events-none">
-            <div
-              className="w-10 h-10 pointer-events-auto cursor-pointer"
-              onClick={toggleDarkMode}
-            >
+          <div className="z-50 h-28 sticky py-8 pr-8 flex flex-row-reverse pointer-events-none noselect">
+            <div className="w-10 h-10">
               <i
-                className={`fa-solid bg-black/50 active:scale-90 active:bg-black/75 transition-all text-lg flex justify-center items-center h-full w-full rounded-full ${
+                onClick={toggleDarkMode}
+                className={`fa-solid bg-black/50 pointer-events-auto cursor-pointer active:scale-90 active:bg-black/75 transition-all text-lg flex justify-center items-center h-full w-full rounded-full ${
                   darkMode
                     ? "fa-moon text-purple-500 active:text-purple-400"
                     : "fa-sun text-orange-400 /active:text-yellow-400"
