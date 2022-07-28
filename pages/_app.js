@@ -80,7 +80,7 @@ function MyApp({ Component, pageProps }) {
           {/* ********************************************************************************************************* */}
           <div className="absolute inset-0 overflow-y-auto overflow-x-hidden z-0">
             <Navbar modal={modal} setModal={setModal} />
-            <div className="absolute inset-0 pt-16 sm:pt-24 z-0">
+            <div className="absolute inset-0 z-0">
               <Component {...pageProps} />
               {/* TEST */}
               <div className="h-32 w-full bg-black"></div>
@@ -89,11 +89,11 @@ function MyApp({ Component, pageProps }) {
           </div>
           {/* ********************************************************************************************************* */}
           <div
-            className={`fixed top-0 left-0 h-full w-full ${
+            className={`absolute top-0 left-0 h-full w-full ${
               !modal.show ? "pointer-events-none" : ""
             }`}
           >
-            <div className="relative w-full h-screen h-fill flex justify-center items-center pt-8 sm:pt-12">
+            <div className="relative w-full h-screen flex justify-center items-center pt-8 sm:pt-12">
               <div
                 className={`absolute top-0 left-0 h-full w-full ${
                   modal.show ? "bg-black/50" : ""
