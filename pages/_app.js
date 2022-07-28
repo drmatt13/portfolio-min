@@ -2,28 +2,13 @@ import { useState, useEffect, useCallback } from "react";
 import "../styles/globals.scss";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import Image from "next/future/image";
-
-// components
-import Navbar from "../components/navbar";
-import AboutModal from "../components/AboutModal";
-import ContactModal from "../components/ContactModal";
-import ServicesModal from "../components/ServicesModal";
 
 // context
 import _appContext from "../context/_appContext";
 
-// styles
-import styles from "../styles/particle.module.scss";
-
-// backgrounds
-import background1 from "../public/images/photo-1470770841072-f978cf4d019e.jpg";
-// import background2 from "../public/images/07_UndergroundLakes__SonDoongCave_shutterstock_1487628662-fodors.jpg";
-
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
   const [isMobile, setIsMobile] = useState(false);
-  const [modal, setModal] = useState({ show: false, type: "" });
 
   useEffect(() => {
     if (
@@ -38,77 +23,17 @@ function MyApp({ Component, pageProps }) {
     }
   }, []);
 
-  let particles = [];
-  for (let i = 0; i < 100; i++)
-    particles.push(
-      <div className={styles["circle-container"]} key={i}>
-        <div
-          className={`${styles.circle} bg-gradient-radial from-sky-400 via-sky-400/20 to-black/20`}
-        />
-      </div>
-    );
-
   return (
     <>
       <Head>
+        <title>Portfolio | Matthew Sweeney</title>
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, user-scalable=no"
         />
-        <title>Portfolio | Matthew Sweeney</title>
-        <meta property="og:title" content="Matt Sweeney - Portfolio" />
-        <meta
-          property="og:description"
-          content="Hi, I'm Matthew. I am a full-stack developing, 2022 Data Analytics graduate from SNHU"
-        />
-        <meta property="og:image" content="/images/ogimage.png" />
-        <meta name="theme-color" content="#3c374a" />
       </Head>
-      <div className="fixed top-0 left-0 right-0 h-screen w-screen">
-        <Image
-          className="h-full w-full object-cover"
-          src={background1}
-          alt="background1"
-          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gIoSUNDX1BST0ZJTEUAAQEAAAIYAAAAAAQwAABtbnRyUkdCIFhZWiAAAAAAAAAAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAAHRyWFlaAAABZAAAABRnWFlaAAABeAAAABRiWFlaAAABjAAAABRyVFJDAAABoAAAAChnVFJDAAABoAAAAChiVFJDAAABoAAAACh3dHB0AAAByAAAABRjcHJ0AAAB3AAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAFgAAAAcAHMAUgBHAEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFhZWiAAAAAAAABvogAAOPUAAAOQWFlaIAAAAAAAAGKZAAC3hQAAGNpYWVogAAAAAAAAJKAAAA+EAAC2z3BhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABYWVogAAAAAAAA9tYAAQAAAADTLW1sdWMAAAAAAAAAAQAAAAxlblVTAAAAIAAAABwARwBvAG8AZwBsAGUAIABJAG4AYwAuACAAMgAwADEANv/bAEMAFA4PEg8NFBIQEhcVFBgeMiEeHBwePSwuJDJJQExLR0BGRVBac2JQVW1WRUZkiGVtd3uBgoFOYI2XjH2Wc36BfP/bAEMBFRcXHhoeOyEhO3xTRlN8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fP/AABEIAKsBMAMBIgACEQEDEQH/xAAVAAEBAAAAAAAAAAAAAAAAAAAABP/EABQQAQAAAAAAAAAAAAAAAAAAAAD/xAAVAQEBAAAAAAAAAAAAAAAAAAAAA//EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AJQFUQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH//2Q=="
-          height={1080}
-          width={1920}
-        />
-      </div>
       <_appContext.Provider value={{ isMobile, router }}>
-        <div>
-          <div className="overflow-hidden">{particles}</div>
-          {/* ********************************************************************************************************* */}
-          <div className="absolute inset-0 overflow-y-auto overflow-x-hidden z-0">
-            <Navbar modal={modal} setModal={setModal} />
-            <div className="absolute inset-0 z-0">
-              <Component {...pageProps} />
-              {/* TEST */}
-              <div className="h-32 w-full bg-black"></div>
-              {/* TEST */}
-            </div>
-          </div>
-          {/* ********************************************************************************************************* */}
-          <div
-            className={`absolute top-0 left-0 h-full w-full ${
-              !modal.show ? "pointer-events-none" : ""
-            }`}
-          >
-            <div className="relative w-full h-screen flex justify-center items-center pt-8 sm:pt-12">
-              <div
-                className={`absolute top-0 left-0 h-full w-full ${
-                  modal.show ? "bg-black/50" : ""
-                } transition-colors`}
-                onClick={() => setModal({ show: false, type: "" })}
-              />
-              <div>
-                {modal.type === "about" && <AboutModal />}
-                {modal.type === "contact" && <ContactModal />}
-                {modal.type === "services" && <ServicesModal />}
-              </div>
-            </div>
-          </div>
-          {/* ********************************************************************************************************* */}
-        </div>
+        <Component {...pageProps} />
       </_appContext.Provider>
     </>
   );
