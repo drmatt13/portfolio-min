@@ -3,6 +3,7 @@ import { useState, useEffect, useContext, useRef } from "react";
 // components
 import MobileLayout from "../components/mobile/MobileLayout";
 import Intro from "../components/mobile/Intro";
+import Websites from "../components/Websites";
 
 // context
 import _appContext from "../context/_appContext";
@@ -12,34 +13,6 @@ import styles from "../styles/MobileHome.module.scss";
 
 export default function Home() {
   const { isMobile, darkMode } = useContext(_appContext);
-  const [height, setHeight] = useState(0);
-  const backgroundRef = useRef();
-  const contentRef = useRef();
-
-  useEffect(() => {
-    // mobile background fix
-    const adjustHeight = () => {
-      backgroundRef.current.setAttribute(
-        "style",
-        `height: ${window.screen.height}px !important;`
-      );
-    };
-    if (isMobile) {
-      screen.orientation.addEventListener("change", adjustHeight);
-      adjustHeight();
-    }
-    // control height of content secion
-    const handleResize = () => {
-      setHeight(contentRef.current.offsetHeight);
-    };
-    window.addEventListener("resize", handleResize);
-    handleResize();
-    return () => {
-      window.removeEventListener("resize", handleResize);
-      if (isMobile)
-        screen.orientation.removeEventListener("change", adjustHeight);
-    };
-  }, [isMobile]);
 
   return (
     <MobileLayout>
@@ -52,8 +25,8 @@ export default function Home() {
       `}</style>
         <div className="relative animate-fade-in" id="landing-page">
           <Intro />
-          <div className="relative" style={{ height }}>
-            <div ref={backgroundRef} className="sticky -top-28 h-screen w-full">
+          <div className="relative h-full">
+            <div className="sticky -top-28 h-max w-full">
               <div className="relative h-full w-full">
                 <div
                   className={`${
@@ -72,10 +45,8 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className="absolute top-0 w-full pb-16" ref={contentRef}>
-              {/* <AboutMe />
-            <Websites /> */}
-              {/* <GetInTouch /> */}
+            <div className="absolute top-0 w-full pb-16">
+              <Websites />
             </div>
           </div>
         </div>
