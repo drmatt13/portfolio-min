@@ -42,9 +42,11 @@ export default function Home() {
                 </div>
                 <Websites />
               </div>
-              <div className="h-12 w-full text-xs flex justify-center items-center bg-gradient-to-b from-white/60 to-blue-500/50 dark:from-black/90 dark:to-purple-900 dark:text-white/75">
-                © 2022 Matthew Sweeney
-              </div>
+              {isMobile && (
+                <div className="h-12 w-full text-xs flex justify-center items-center bg-gradient-to-b from-white/60 to-blue-500/50 dark:from-black/90 dark:to-purple-900 dark:text-white/75">
+                  © 2022 Matthew Sweeney
+                </div>
+              )}
             </div>
           </div>
         </div>

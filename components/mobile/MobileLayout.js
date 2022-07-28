@@ -85,7 +85,6 @@ const MobileLayout = ({ children }) => {
             {children}
           </div>
         </div>
-        {/* TEST */}
         <div
           className={`absolute top-0 left-0 h-full w-full ${
             !modal.show ? "pointer-events-none" : ""
@@ -104,7 +103,6 @@ const MobileLayout = ({ children }) => {
             </div>
           </div>
         </div>
-        {/* TEST */}
       </div>
     </>
   );
