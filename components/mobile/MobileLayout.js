@@ -69,7 +69,7 @@ const MobileLayout = ({ children }) => {
               <i
                 onClick={toggleDarkMode}
                 className={`fa-solid bg-black/50 cursor-pointer active:scale-90 active:bg-black/75 transition-all text-lg flex justify-center items-center h-full w-full rounded-full 
-                ${!modal.show ? "pointer-events-auto" : "opacity-50"}
+                ${!modal.show ? "pointer-events-auto" : "opacity-0"}
                 ${
                   darkMode
                     ? "fa-moon text-purple-500 active:text-purple-400"

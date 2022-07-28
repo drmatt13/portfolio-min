@@ -1,5 +1,8 @@
-import React from "react";
+import { useContext } from "react";
 import Image from "next/image";
+
+// context
+import _appContext from "../context/_appContext";
 
 // styles
 import styles from "../styles/scroll.module.scss";
@@ -86,9 +89,12 @@ const services = [
 ];
 
 const AboutModal = () => {
+  const { isMobile } = useContext(_appContext);
   return (
     <div
-      className={`${styles.scroll} rounded-lg overflow-hidden backdrop-blur-md bg-white/40 shadow-lg animate-fade-in pr-1.5`}
+      className={`${styles.scroll} ${
+        isMobile ? "-translate-y-4" : ""
+      } rounded-lg overflow-hidden backdrop-blur-md bg-white/40 shadow-lg animate-fade-in pr-1.5`}
     >
       <div className="[&>div:last-of-type]:mb-0 overflow-y-scroll max-h-[75vh] max-w-[90vw] w-[450px] py-3 pl-3 pr-1.5 flex flex-col ">
         {services.map((service, key) => (

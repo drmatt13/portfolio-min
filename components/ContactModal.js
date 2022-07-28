@@ -1,10 +1,18 @@
-import React from "react";
+import { useContext } from "react";
+
+// context
+import _appContext from "../context/_appContext";
 
 const ContactModal = () => {
+  const { isMobile } = useContext(_appContext);
   return (
     <>
       <div>
-        <div className="bg-white/40 backdrop-blur-md py-4 px-2 flex flex-col w-[300px] shadow-lg rounded-lg z-50 animate-fade-in">
+        <div
+          className={`bg-white/40 ${
+            isMobile ? "-translate-y-4" : ""
+          } backdrop-blur-md py-4 px-2 flex flex-col w-[300px] shadow-lg rounded-lg z-50 animate-fade-in`}
+        >
           <div className="mb-2 text-center text-xl font-semibold">
             Contact Me
           </div>
