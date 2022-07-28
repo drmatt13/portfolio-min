@@ -10,7 +10,7 @@ const ContactModal = () => {
       <div>
         <div
           className={`bg-white/40 ${
-            isMobile ? "-translate-y-4" : ""
+            isMobile ? "-translate-y-8" : ""
           } backdrop-blur-md py-4 px-2 flex flex-col w-[300px] shadow-lg rounded-lg z-50 animate-fade-in`}
         >
           <div className="mb-2 text-center text-xl font-semibold">
