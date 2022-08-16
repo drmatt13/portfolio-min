@@ -5,6 +5,7 @@ import context from "../context/_appContext";
 
 const WebsiteCard = ({
   data: {
+    maintenance,
     src,
     blurDataURL,
     title,
@@ -209,10 +210,16 @@ const WebsiteCard = ({
               </div>
               <div className="flex-1 flex flex-col justify-end">
                 <div
-                  className="button text-white text-xs lg:text-sm 2xl:text-xl no-select cursor-pointer mb-2 mt-2 lg:mt-3 mx-4 py-2 rounded-sm sm:rounded-md text-center bg-blue-500 hover:bg-blue-400 transition-all duration-100 select-none"
-                  onClick={() => window.open(link, "_blank").focus()}
+                  className={`${
+                    maintenance
+                      ? "bg-slate-500 cursor-not-allowed"
+                      : "bg-blue-500 hover:bg-blue-400 cursor-pointer"
+                  } button text-white text-xs lg:text-sm 2xl:text-xl no-select mb-2 mt-2 lg:mt-3 mx-4 py-2 rounded-sm sm:rounded-md text-center transition-all duration-100 select-none`}
+                  onClick={() =>
+                    maintenance ? "" : window.open(link, "_blank").focus()
+                  }
                 >
-                  {button}
+                  {maintenance ? "Under Maintenance" : button}
                 </div>
               </div>
             </div>
