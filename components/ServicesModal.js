@@ -9,23 +9,20 @@ import styles from "../styles/scroll.module.scss";
 
 // images
 import ux from "../public/images/services/000-Web-UI-Design.png";
-import backend from "../public/images/services/node-js-guide-seo.jpg";
+import node from "../public/images/services/node-js-guide-seo.jpg";
 import database from "../public/images/services/database-1024x703.webp";
-import cloud from "../public/images/services/maxresdefault.jpg";
 import dataStructures from "../public/images/services/0ed6cb479934a668cfb86663d4bddee5.png";
 import react from "../public/images/services/react.png";
 import analyze from "../public/images/services/SNHU-Stacked-Blue-Logo-.jpg";
-import seo from "../public/images/services/1603954182-seo-article-header.jpg";
-import ads from "../public/images/services/ads.png";
-import typescript from "../public/images/services/uf3a8y7xh8aroo95qocz.webp";
-import solidity from "../public/images/services/defi-series-smart-contract.jpg";
+import typescript from "../public/images/services/typescript.png";
+import next from "../public/images/services/next.jpg";
+import tailwind from "../public/images/services/tailwind.jpg";
+// import cloud from "../public/images/services/maxresdefault.jpg";
+// import seo from "../public/images/services/1603954182-seo-article-header.jpg";
+// import ads from "../public/images/services/ads.png";
+// import solidity from "../public/images/services/defi-series-smart-contract.jpg";
 
 const services = [
-  // {
-  //   src: typescript,
-  //   alt: "typescript",
-  //   title: "title",
-  // },
   {
     src: analyze,
     alt: "analyze",
@@ -35,8 +32,26 @@ const services = [
   {
     src: ux,
     alt: "ux",
-    title: "UX / UI Development",
+    title: "UX / UI Design",
     text: "I will create and bring to life your designs elegantly, emphasizing user experience with seamless transitions between web and mobile layouts.",
+  },
+  {
+    src: typescript,
+    alt: "typescript",
+    title: "Typescript",
+    text: "I will create and bring to life your designs elegantly, emphasizing user experience with seamless transitions between web and mobile layouts.",
+  },
+  {
+    src: tailwind,
+    alt: "tailwind",
+    title: "Tailwind CSS",
+    text: "I will create and bring to life your designs elegantly, emphasizing user experience with seamless transitions between web and mobile layouts.",
+  },
+  {
+    src: node,
+    alt: "node",
+    title: "Node.js",
+    text: "Predominantly utilize express js and can implement routers, controllers, middleware, and error handling—experience with developing microcontrollers, event buses, and REST APIs for various applications.",
   },
   {
     src: react,
@@ -45,16 +60,10 @@ const services = [
     text: "3+ years of extensive experience with React.js. With a strong understanding of vanilla javascript along with the experience of working on countless React.js projects, I now have a solid understanding of most advanced Advanced React Concepts.",
   },
   {
-    src: backend,
-    alt: "backend",
-    title: "Node.js",
-    text: "Predominantly utilize express js and can implement routers, controllers, middleware, and error handling—experience with developing microcontrollers, event buses, and REST APIs for various applications.",
-  },
-  {
-    src: dataStructures,
-    alt: "dataStructures",
-    title: "Data Structures",
-    text: "Predominantly utilize express js and can implement routers, controllers, middleware, and error handling—experience with developing microcontrollers, event buses, and REST APIs for various applications.",
+    src: next,
+    alt: "next",
+    title: "Next.js",
+    text: "I will create and bring to life your designs elegantly, emphasizing user experience with seamless transitions between web and mobile layouts.",
   },
   {
     src: database,
@@ -63,29 +72,35 @@ const services = [
     text: "Predominantly utilize express js and can implement routers, controllers, middleware, and error handling—experience with developing microcontrollers, event buses, and REST APIs for various applications.",
   },
   {
-    src: solidity,
-    alt: "solidity",
-    title: "Solidity",
+    src: dataStructures,
+    alt: "dataStructures",
+    title: "Data Structures",
     text: "Predominantly utilize express js and can implement routers, controllers, middleware, and error handling—experience with developing microcontrollers, event buses, and REST APIs for various applications.",
   },
-  {
-    src: cloud,
-    alt: "cloud",
-    title: "Cloud Computing",
-    text: "Predominantly utilize express js and can implement routers, controllers, middleware, and error handling—experience with developing microcontrollers, event buses, and REST APIs for various applications.",
-  },
-  {
-    src: ads,
-    alt: "ads",
-    title: "Ads & Monitization",
-    text: "Predominantly utilize express js and can implement routers, controllers, middleware, and error handling—experience with developing microcontrollers, event buses, and REST APIs for various applications.",
-  },
-  {
-    src: seo,
-    alt: "seo",
-    title: "Search Engine Optimization",
-    text: "Predominantly utilize express js and can implement routers, controllers, middleware, and error handling—experience with developing microcontrollers, event buses, and REST APIs for various applications.",
-  },
+  // {
+  //   src: solidity,
+  //   alt: "solidity",
+  //   title: "Solidity",
+  //   text: "Predominantly utilize express js and can implement routers, controllers, middleware, and error handling—experience with developing microcontrollers, event buses, and REST APIs for various applications.",
+  // },
+  // {
+  //   src: cloud,
+  //   alt: "cloud",
+  //   title: "Cloud Computing",
+  //   text: "Predominantly utilize express js and can implement routers, controllers, middleware, and error handling—experience with developing microcontrollers, event buses, and REST APIs for various applications.",
+  // },
+  // {
+  //   src: ads,
+  //   alt: "ads",
+  //   title: "Ads & Monitization",
+  //   text: "Predominantly utilize express js and can implement routers, controllers, middleware, and error handling—experience with developing microcontrollers, event buses, and REST APIs for various applications.",
+  // },
+  // {
+  //   src: seo,
+  //   alt: "seo",
+  //   title: "Search Engine Optimization",
+  //   text: "Predominantly utilize express js and can implement routers, controllers, middleware, and error handling—experience with developing microcontrollers, event buses, and REST APIs for various applications.",
+  // },
 ];
 
 const AboutModal = () => {
