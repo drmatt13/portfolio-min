@@ -42,7 +42,7 @@ const DesktopLayout = ({ children }) => {
         />
       </div>
       <div>
-        <div className="overflow-hidden">{particles}</div>
+        {/* <div className="overflow-hidden">{particles}</div> */}
         <div className="absolute inset-0 overflow-y-auto overflow-x-hidden z-0">
           <Navbar modal={modal} setModal={setModal} />
           <div className="absolute inset-0 z-0">{children}</div>
