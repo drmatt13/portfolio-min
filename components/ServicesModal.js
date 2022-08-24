@@ -119,7 +119,7 @@ const AboutModal = () => {
     <div
       className={`${styles.scroll} ${
         isMobile ? "-translate-y-8" : ""
-      } rounded-lg overflow-hidden backdrop-blur-md bg-white/40 shadow-lg animate-fade-in pr-1.5`}
+      } transform-gpu rounded-lg overflow-hidden backdrop-blur-md bg-white/40 shadow-lg animate-fade-in pr-1.5`}
     >
       <div className="[&>div:last-of-type]:mb-0 overflow-y-scroll max-h-[75vh] max-w-[90vw] w-[450px] py-3 pl-3 pr-1.5 flex flex-col ">
         {services.map((service, key) => (
