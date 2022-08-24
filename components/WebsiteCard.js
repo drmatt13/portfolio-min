@@ -148,7 +148,7 @@ const WebsiteCard = ({
         }
         @media only screen and (min-width: 400px) {
           div {
-            transform/-style: preserve-3d;
+            transform-style: preserve-3d;
           }
           .group {
             background-color: rgb(0, 0, 0, 0.75);
