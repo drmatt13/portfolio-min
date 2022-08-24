@@ -172,17 +172,25 @@ const WebsiteCard = ({
           }
         }
       `}</style>
-      <div className="snap-center snap-always rounded-lg min-w-[12rem] h-[16.5rem] xs:min-w-[13rem] xs:h-[18rem] lg:min-w-[16rem] lg:h-[22rem] xl:min-w-[17rem] xl:h-[23rem] 2xl:min-w-[18rem] 2xl:h-[24rem] transform-gpu card-backdrop animate-fade-in">
+      <div className="relative snap-center snap-always rounded-lg min-w-[12rem] h-[16.5rem] xs:min-w-[13rem] xs:h-[18rem] lg:min-w-[16rem] lg:h-[22rem] xl:min-w-[17rem] xl:h-[23rem] 2xl:min-w-[18rem] 2xl:h-[24rem] animate-fade-in">
         <div
           ref={cardRef}
           onMouseMove={mouseMove}
           onMouseOut={mouseOut}
-          className="flex flex-col justify-between h-full w-full rounded-lg bg-black/50"
+          className="flex flex-col justify-between h-full w-full rounded-lg"
           style={{
             transition: "all .4s cubic-bezier(.165, .84, .44, 1)",
           }}
         >
-          <div className="relative flex min-h-[1%] h-32 xs:flex-1 transition-all ease-in select-none">
+          <div className="overflow-hidden rounded-lg absolute top-0 left-0 h-full w-full -z-10">
+            <img
+              className="h-full w-full opacity-60"
+              src="/images/websites/glass.jpg"
+              alt="glass"
+            />
+            {/* <div className="bg-black absolute h-full w-full top-0" /> */}
+          </div>
+          <div className="relative flex min-h-[1%] h-32 xs:flex-1 transition-all ease-in select-none bg-black/70 rounded-t-lg">
             <div className="extrude image_container flex w-full rounded-t-lg overflow-hidden">
               <Image
                 src={src}
@@ -196,7 +204,7 @@ const WebsiteCard = ({
               />
             </div>
           </div>
-          <div className="relative flex-1">
+          <div className="relative flex-1 bg-black/70 rounded-b-lg">
             <div className="extrude absolute top-0 left-0 h-full w-full flex flex-col">
               <div className="cursor-default py-1.5 lg:py-2 text-center text-white text-xl xs:text-base lg:text-lg 2xl:text-xl">
                 {title}
