@@ -184,13 +184,13 @@ const WebsiteCard = ({
         >
           <div className="overflow-hidden rounded-lg absolute top-0 left-0 h-full w-full -z-10">
             <img
-              className="h-full w-full opacity-60"
+              className="h-full w-full opacity-70"
               src="/images/websites/glass.jpg"
               alt="glass"
             />
             {/* <div className="bg-black absolute h-full w-full top-0" /> */}
           </div>
-          <div className="relative flex min-h-[1%] h-32 xs:flex-1 transition-all ease-in select-none bg-black/70 rounded-t-lg">
+          <div className="relative flex min-h-[1%] h-32 xs:flex-1 transition-all ease-in select-none bg-black/75 rounded-t-lg">
             <div className="extrude image_container flex w-full rounded-t-lg overflow-hidden">
               <Image
                 src={src}
@@ -204,7 +204,7 @@ const WebsiteCard = ({
               />
             </div>
           </div>
-          <div className="relative flex-1 bg-black/70 rounded-b-lg">
+          <div className="relative flex-1 bg-black/75 rounded-b-lg">
             <div className="extrude absolute top-0 left-0 h-full w-full flex flex-col">
               <div className="cursor-default py-1.5 lg:py-2 text-center text-white text-xl xs:text-base lg:text-lg 2xl:text-xl">
                 {title}
