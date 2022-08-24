@@ -148,7 +148,7 @@ const WebsiteCard = ({
         }
         @media only screen and (min-width: 400px) {
           div {
-            transform-style: preserve-3d;
+            transform/-style: preserve-3d;
           }
           .group {
             background-color: rgb(0, 0, 0, 0.75);
@@ -167,10 +167,6 @@ const WebsiteCard = ({
             opacity: 0.75;
             box-shadow: rgba(0, 0, 0, 1) 0px 5px 15px;
           }
-          .group .divider_bar {
-            opacity: 0.05;
-            transition-duration: 150ms;
-          }
           .group .button {
             box-shadow: rgba(0, 0, 0, 1) 0px 5px 15px;
           }
@@ -182,12 +178,14 @@ const WebsiteCard = ({
           onMouseMove={mouseMove}
           onMouseOut={mouseOut}
           className="flex flex-col justify-between h-full w-full rounded-lg bg-black/50"
-          style={{
-            transition: "all .4s cubic-bezier(.165, .84, .44, 1)",
-          }}
+          style={
+            {
+              // transition: "all .4s cubic-bezier(.165, .84, .44, 1)",
+            }
+          }
         >
           <div className="relative flex min-h-[1%] h-32 xs:flex-1 transition-all ease-in select-none">
-            <div className="extrude image_container flex w-full rounded-t-lg overflow-hidden">
+            <div className="/extrude image_container flex w-full rounded-t-lg overflow-hidden">
               <Image
                 src={src}
                 alt={title}
@@ -201,7 +199,7 @@ const WebsiteCard = ({
             </div>
           </div>
           <div className="relative flex-1">
-            <div className="extrude absolute top-0 left-0 h-full w-full flex flex-col">
+            <div className="/extrude absolute top-0 left-0 h-full w-full flex flex-col">
               <div className="cursor-default py-1.5 lg:py-2 text-center text-white text-xl xs:text-base lg:text-lg 2xl:text-xl">
                 {title}
               </div>
