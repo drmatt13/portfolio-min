@@ -35,7 +35,7 @@ const Websites = () => {
       title: "UI Design Example",
       description:
         "Next js + tailwind UI / UX mobile first design example that was inspired by the official tailwindcss website.",
-      link: "https://social-template.vercel.app",
+      link: "https://ui-design-drmatt13.vercel.app",
       button: "Open and resize",
       dimensions: {
         width: 1039,
