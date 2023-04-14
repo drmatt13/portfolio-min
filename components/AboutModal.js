@@ -1,13 +1,20 @@
+import Image from "next/image";
+
+import resume from "../public/images/resume v3.8.png";
+
 const AboutModal = () => {
   return (
     <div className="flex h-full w-screen animate-fade-in justify-center items-center pointer-events-none">
-      <iframe
-        className="min-w-fit w-1/2 max-w-xl rounded-md aspect-video animate-fade-in pointer-events-auto"
-        src="https://www.youtube.com/embed/u31qwQUeGuM"
-        title="YouTube video player"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-      ></iframe>
+      <div className="flex h-screen aspect-[1/1.8] sm:aspect-[1/1.4] items-center pb-12 ">
+        <Image
+          src={resume}
+          height={2200}
+          width={1700}
+          objectFit="contain"
+          className="aspect-[1/1.8] sm:aspect-[1/1.4] bg-black pointer-events-auto"
+          alt=""
+        />
+      </div>
     </div>
   );
 };

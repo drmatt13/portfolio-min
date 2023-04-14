@@ -6,7 +6,7 @@ import Link from "next/link";
 import _appContext from "../context/_appContext";
 
 // images
-import logo from "../public/images/logo.jpg";
+import logo from "../public/images/processor.png";
 
 const Navbar = ({ modal, setModal }) => {
   const { isMobile } = useContext(_appContext);
@@ -36,22 +36,25 @@ const Navbar = ({ modal, setModal }) => {
             !isMobile ? "" : "translate-y-1"
           }`}
         >
-          <div className="absolute top-0 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:h-[3.75rem] lg:w-[3.75rem] group">
+          <div className="absolute top-0 sm:w-12 sm:h-12 md:w-14 md:h-14 group">
             <div className="absolute top-0 left-0 w-full group-hover:h-44 md:group-hover:h-52 -z-10"></div>
             <div
-              className="shadow-2 border border-black/50 hidden sm:block rounded-full h-12 md:h-14 lg:h-[3.75rem] group-hover:scale-[.85] transition-transform ease-out duration-300 translate3d"
+              className="relative shadow-2 border border-black/50 hidden sm:block rounded-full h-12 md:h-14 group-hover:scale-[.85] transition-transform ease-out duration-300 translate3d"
               onClick={() => setModal({ show: false, type: "" })}
             >
+              <div className="absolute top-0 left-0 h-full w-full flex justify-center items-center">
+                <div className=" h-4/5 w-4/5 rounded-full" />
+              </div>
               <Image
                 src={logo}
                 alt="Matthew Sweeney"
-                className="rounded-full"
-                width={75}
-                height={75}
+                className="/rounded-full"
+                width={512}
+                height={512}
                 objectFit="cover"
               />
             </div>
-            <div className="-z-10 flex justify-center items-center absolute top-0 left-0 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:h-[3.75rem] lg:w-[3.75rem] opacity-0 pointer-events-none group-hover:pointer-events-auto group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:translate-y-[110%] transition-all duration-300 ease-out">
+            <div className="-z-10 flex justify-center items-center absolute top-0 left-0 sm:w-12 sm:h-12 md:w-14 md:h-14 opacity-0 pointer-events-none group-hover:pointer-events-auto group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:translate-y-[110%] transition-all duration-300 ease-out">
               <div
                 onClick={() =>
                   window
@@ -63,7 +66,7 @@ const Navbar = ({ modal, setModal }) => {
                 <img src="https://cdn3.iconfinder.com/data/icons/capsocial-round/500/linkedin-512.png" />
               </div>
             </div>
-            <div className="-z-10 flex justify-center items-center absolute top-0 left-0 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:h-[3.75rem] lg:w-[3.75rem] opacity-0 pointer-events-none group-hover:pointer-events-auto group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:translate-y-[220%] transition-all duration-300 ease-out">
+            <div className="-z-10 flex justify-center items-center absolute top-0 left-0 sm:w-12 sm:h-12 md:w-14 md:h-14 opacity-0 pointer-events-none group-hover:pointer-events-auto group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:translate-y-[220%] transition-all duration-300 ease-out">
               <div
                 onClick={() =>
                   window.open("https://github.com/drmatt13", "_blank").focus()
@@ -74,7 +77,7 @@ const Navbar = ({ modal, setModal }) => {
                 <img src="https://cdn4.iconfinder.com/data/icons/social-media-free-13/32/Github_social_media_logo-512.png" />
               </div>
             </div>
-            <div className="-z-10 flex justify-center items-center absolute top-0 left-0 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:h-[3.75rem] lg:w-[3.75rem] opacity-0 pointer-events-none group-hover:pointer-events-auto group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:translate-y-[330%] transition-all duration-300 ease-out rounded-b-full">
+            <div className="-z-10 flex justify-center items-center absolute top-0 left-0 sm:w-12 sm:h-12 md:w-14 md:h-14 opacity-0 pointer-events-none group-hover:pointer-events-auto group-hover:opacity-100 scale-50 group-hover:scale-100 group-hover:translate-y-[330%] transition-all duration-300 ease-out rounded-b-full">
               <div
                 onClick={() =>
                   window
@@ -87,7 +90,7 @@ const Navbar = ({ modal, setModal }) => {
               </div>
             </div>
           </div>
-          <div className="hidden sm:inline mr-4 md:mr-5 h-12 w-12 md:h-14 md:w-14 lg:h-[3.75rem] lg:w-[3.75rem] rounded-full overflow-hidden text-[0]"></div>
+          <div className="hidden sm:inline mr-4 md:mr-5 h-12 w-12 md:h-14 md:w-14 rounded-full overflow-hidden text-[0]"></div>
           <div className="group flex flex-col font-bold cursor-pointer">
             <div
               className="flex"
@@ -106,17 +109,17 @@ const Navbar = ({ modal, setModal }) => {
           </div>
         </div>
         <div className={`font-bold flex ${!isMobile ? "" : "translate-y-1"}`}>
-          <div className="flex-col cursor-pointer group">
+          <div className="ml-4 md:ml-6 lg:ml-8 cursor-pointer group">
             <div
               onClick={() =>
                 setModal(
-                  modal.type !== "services"
-                    ? { show: true, type: "services" }
+                  modal.type !== "about"
+                    ? { show: true, type: "about" }
                     : { show: false, type: "" }
                 )
               }
             >
-              <div>services</div>
+              <div>resume</div>
               <div
                 className={`h-[1.5px] w-0 rounded-full bg-gradient-to-r from-transparent via-white to-transparent opacity-0 ${
                   isMobile
@@ -130,13 +133,13 @@ const Navbar = ({ modal, setModal }) => {
             <div
               onClick={() =>
                 setModal(
-                  modal.type !== "about"
-                    ? { show: true, type: "about" }
+                  modal.type !== "services"
+                    ? { show: true, type: "services" }
                     : { show: false, type: "" }
                 )
               }
             >
-              <div>about me</div>
+              <div>services</div>
               <div
                 className={`h-[1.5px] w-0 rounded-full bg-gradient-to-r from-transparent via-white to-transparent opacity-0 ${
                   isMobile

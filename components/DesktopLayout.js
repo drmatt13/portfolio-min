@@ -55,7 +55,7 @@ const DesktopLayout = ({ children }) => {
           <div className="relative w-full h-screen flex justify-center items-center pt-8 sm:pt-12">
             <div
               className={`absolute top-0 left-0 h-full w-full ${
-                modal.show ? "bg-black/50" : ""
+                modal.show ? "bg-black/40" : ""
               } transition-colors`}
               onClick={() => setModal({ show: false, type: "" })}
             />
