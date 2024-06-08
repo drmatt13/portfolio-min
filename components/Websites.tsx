@@ -39,20 +39,20 @@ const Websites = () => {
     },
 
     {
-      maintenance: true,
-      src: "/images/websites/socketchat.png",
+      // maintenance: true,
+      src: "/images/websites/globalchatdark.png",
       blurDataURL:
         "data:image/webp;base64,UklGRhIFAABXRUJQVlA4WAoAAAAgAAAAPQIAswEASUNDUBgCAAAAAAIYAAAAAAQwAABtbnRyUkdCIFhZWiAAAAAAAAAAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAAHRyWFlaAAABZAAAABRnWFlaAAABeAAAABRiWFlaAAABjAAAABRyVFJDAAABoAAAAChnVFJDAAABoAAAAChiVFJDAAABoAAAACh3dHB0AAAByAAAABRjcHJ0AAAB3AAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAFgAAAAcAHMAUgBHAEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFhZWiAAAAAAAABvogAAOPUAAAOQWFlaIAAAAAAAAGKZAAC3hQAAGNpYWVogAAAAAAAAJKAAAA+EAAC2z3BhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABYWVogAAAAAAAA9tYAAQAAAADTLW1sdWMAAAAAAAAAAQAAAAxlblVTAAAAIAAAABwARwBvAG8AZwBsAGUAIABJAG4AYwAuACAAMgAwADEANlZQOCDUAgAAEEEAnQEqPgK0AT7tdrhWqaclI6AIATAdiWlu4W2ggz/h6OswAJ7DEUtuxaBy2P57ZOQ99snJTZf7ZRJ7bMyzqu9yRGgWS7XmZr9Nt22Vs7EzVTr/dJ3yK93Q3dsAJea/H3pCcNXaWCda49OXPdkAXeeoqfvPVGQ8Q6ya7ljJN9CJWSd+5wCp+89UZELLcCKspuC1Lj/XNPq4jt9mhvHoVgylr2OyURQRA9Rk7LfzHMJnZ6ihYJhL/EdIbO/eCIqfqbOllF27AXBSGCv/jqbZobvPUVMp2oAOPnsDzvb3r61fNGalP3N4p1fe0fojPpA2vFyeIcQEZA2rCCG2cPD2ooV+zfp7ZOQ+Rme32aJuHL2Lmpku0qBZLteWl2+1k22Aqyba+92ych77ZOQ994iiZPgi4qfcFku14uTkPfbJ6u88yoCOrqlpUCyXa8XJyHyNIAshu88yXcbzbm14uTkPfbJ6u5bJdtMNrxcnIe+2WoAqyQNrxiP0E32ych77ZOREDych8MWQRcoDAPfbJyHvtk5D320MDSm/BLk5D32ych78AQD33E4YsSl2vFych77ZOQ99tCKO2ZydpdrxcnIe+2TkPfbSDIrFm9snIe+2TkRA8nIe+4ntGYO88nIe+2TkPfbJydGH7xKehtza8XJyHvwBAPfntmjkOmG14uTkPfbN3JyHwxYlz31xJyHvtk4/gAD++1SE9jn4lhY7guMGhw5BPa8Vwh4+K0kdBh4rbR1M6rKTo3RdIy5dEMPr6Hr/5D+Zvw9NBDQ5XTa5aIhvCWL8HEIHrzCPqhkzBHpsWRc63X4LuuUTynru+iGsDAiWK2DRJ7UYuzQ5Buckcp+fkSAZuLSRohmHvs8l/KII6lo2DC3xgA6b8ggpOuFYcjrrKBK/GhL+ym3HJAhwurDFYpDdyTCDgDHDBT2hANIcBnApNAE7AAAAMe7a4CaWBAAAAAAAAA==",
-      title: "Socket Chat",
-      description:
-        "fix state for animated message pings, NEEDS WHITEPAPER sytle website",
-      link: "https://banned-social.vercel.app",
+      title: "GlobalChat (Docker)",
+      description: "Finished",
+      link: "https://global-chat-docs.vercel.app",
       button: "Button",
       dimensions: {
         width: 664,
         height: 444,
       },
       objectFit: "fill",
+      maintenance: false,
     },
     {
       // maintenance: true,
@@ -69,7 +69,6 @@ const Websites = () => {
       },
       maintenance: false,
     },
-
     // {
     //   maintenance: true,
     //   src: "/images/websites/blank.png",

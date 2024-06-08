@@ -189,7 +189,7 @@ const WebsiteCard = ({
           }
         }
       `}</style>
-      <div className="relative snap-center snap-always rounded-lg min-w-[12rem] h-[16.5rem] xs:min-w-[13rem] xs:h-[18rem] lg:min-w-[16rem] lg:h-[22rem] xl:min-w-[17rem] xl:h-[23rem] 2xl:min-w-[18rem] 2xl:h-[24rem] /animate-fade-in">
+      <div className="relative snap-center snap-always rounded-lg min-w-[12rem] max-w-[10vw] h-[16.5rem] xs:min-w-[13rem] xs:h-[18rem] lg:min-w-[16rem] lg:h-[22rem] xl:min-w-[17rem] xl:h-[23rem] 2xl:min-w-[18rem] 2xl:h-[24rem] /animate-fade-in">
         <div
           ref={cardRef}
           onMouseMove={mouseMove}
@@ -246,7 +246,7 @@ const WebsiteCard = ({
                     maintenance
                       ? "bg-slate-500 cursor-not-allowed"
                       : "bg-blue-500 hover:bg-blue-400 cursor-pointer"
-                  } button text-white text-xs lg:text-sm 2xl:text-xl no-select mb-2 lg:mb-3 mt-2 lg:mt-3 mx-4 py-2 rounded-sm sm:rounded-md text-center transition-all duration-100 select-none`}
+                  } button text-white text-xs lg:text-sm no-select mb-2 lg:mb-3 mt-2 lg:mt-3 mx-4 py-2 rounded-sm sm:rounded-md text-center transition-all duration-100 select-none`}
                   onClick={() =>
                     maintenance ? "" : window.open(link, "_blank").focus()
                   }
